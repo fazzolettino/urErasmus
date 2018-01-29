@@ -218,7 +218,7 @@ list-style-image: url('LOGOCAMBRIDGE.png');
                 for ($i = 0; $i < count($annunci); $i++) {
                     ?>
                     <div class="row">
-                        <div class="col-lg-12 col-md 12- col-sm-12 col-xs-12">
+                        <div class="col-lg-12 col-md 12- col-sm-12 col-xs-12 text-center">
                             <p><b> Titolo:</b>&nbsp <?php echo $annunci[$i]->getTitolo(); ?></p>
                             <p><b> Descrizione: </b>&nbsp <?php echo $annunci[$i]->getDescrizione(); ?></p>
                             <p><b> Tag:</b>&nbsp <?php $tags = $annunci[$i]->getTags();
