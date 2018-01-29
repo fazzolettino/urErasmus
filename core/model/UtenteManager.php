@@ -30,6 +30,7 @@ class UtenteManager
     }
 
 
+
     private function lastInsertKey(){
         $lastInsert = "SELECT MAX(KEYUTENTE) FROM UTENTE";
         $result_query = mysqli_query(Connector::getConnector(),$lastInsert);
@@ -59,19 +60,20 @@ class UtenteManager
         $selectSql ="SELECT * FROM UTENTE WHERE KEYUTENTE = '%s'";
         $query = sprintf($selectSql,$keyUtente);
         $res = mysqli_query(Connector::getConnector(), $query);
-        if ($res) {
+        if ($res) {     
             while ($r = $res->fetch_assoc()) {
                 $user = new Utente($r['KEYUTENTE'],$r['ID'], $r['EMAIL'], $r['CITTA'], $r['PASS']);
                 return $user;
             }
         }
+
         return false;
     }
 
     public function getUtenteById($id){
         $selectSql ="SELECT * FROM UTENTE WHERE ID = '%s'";
         $query = sprintf($selectSql,$id);
-        $res = mysqli_query(Conector::getConnector(), $query);
+        $res = mysqli_query(Connector::getConnector(), $query);
         if ($res) {
             while ($r = $res->fetch_assoc()) {
                 $user = new Utente($r['KEYUTENTE'],$r['ID'], $r['EMAIL'], $r['CITTA'], $r['PASS']);
@@ -85,7 +87,7 @@ class UtenteManager
     public function checkLogin($username,$password){
         $checkLogin ="SELECT * FROM UTENTE WHERE ID ='%s' AND PASS = '%s'";
         $query = sprintf($checkLogin,$username,$password);
-        $res = mysqli_query(Conector::getConnector(), $query);
+        $res = mysqli_query(Connector::getConnector(), $query);
 
         if($res->num_rows >0){
             return true;

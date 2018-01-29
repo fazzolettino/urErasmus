@@ -6,7 +6,7 @@
     <?php include_once VIEW_DIR . "headerStart.php"?>
 </head>
 
-<body class="index">
+<body class="index" class="text-center">
 <?php include_once VIEW_DIR . "header.php"?>
 <section class="main-section">
     <div class="container">
@@ -68,7 +68,7 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <a href="<?php echo DOMINIO_SITO;?>/inserisciAnnuncio">
                                     <button class="btn btn-success btn-lg">
-                                        Aggiungi nuovo Annuncio +
+                                        Aggiungi nuovo Annuncio
                                     </button>
                                 </a>
                             </div>

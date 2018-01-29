@@ -177,7 +177,7 @@ list-style-image: url('LOGOCAMBRIDGE.png');
 </style>
 
 	
-    <title>Flyers | Lista Annunci</title>
+    <title>URErasmus | Lista Annunci</title>
     <?php include_once VIEW_DIR . "headerStart.php"?>
 
 </head>
@@ -196,15 +196,6 @@ list-style-image: url('LOGOCAMBRIDGE.png');
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                 <h2>Universities List</h2>
-                <hr class="star-primary">
-                
-						 <form class="search" method="post" action="index.html" >
-		 				<input type="text" name="q" placeholder="Search..." />
-		 				<ul class="results" >
-			 <li><a href="index.html">Universidad de Granada<br/>
-			 <li><a href="index.html">Universidad de Oviedo<br/>
-	 	     <li><a href="index.html">University of Oxford<br/>
-         	<li><a href="index.html">University of Cambridge</a></li>
 		 </ul>
 	 </form>
 </section>

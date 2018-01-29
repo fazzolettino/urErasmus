@@ -20,9 +20,7 @@ SET time_zone = "+00:00";
 -- Database: `urErasmus`
 --
 
--- -------------------------------------------------------- Ale -> 8=============D
-
---
+-- -------------------------------------------------------- 
 -- Struttura della tabella `annuncio`
 --
 
@@ -151,19 +149,19 @@ INSERT INTO `tagperannuncio` (`KEYTAG`, `KEYANNUNCIO`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `tagperappunti`
+-- Struttura della tabella `tagpercorsi`
 --
 
-CREATE TABLE `tagperappunti` (
+CREATE TABLE `tagpercorsi` (
   `KEYTAG` int(11) NOT NULL,
-  `KEYAPPUNTI` int(11) NOT NULL
+  `KEYCORSI` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dump dei dati per la tabella `tagperappunti`
+-- Dump dei dati per la tabella `tagpercorsi`
 --
 
-INSERT INTO `tagperappunti` (`KEYTAG`, `KEYAPPUNTI`) VALUES
+INSERT INTO `tagpercorsi` (`KEYTAG`, `KEYCORSI`) VALUES
 (1, 1),
 (2, 1),
 (3, 2),
@@ -207,20 +205,20 @@ CREATE TABLE `utente` (
 --
 
 INSERT INTO `utente` (`KEYUTENTE`, `ID`, `EMAIL`, `CITTA`, `PASS`) VALUES
-(2, 'Rodrigo Calvo', 'rodrigo@gmail.com', 'Oviedo', 'rodrimepone'),
-(3, 'Manuel', 'saradifelice@hotmail.com', 'Salerno', 'saradifelice'),
-(4, 'Alessandro Guaion', 'v.noviello@gmail.com', 'Sala Consilina', 'vnoviello'),
-(5, 'Martina Lombardi', 'Lombardim@live.it', 'Caserta', '123456'),
-(6, 'Severino Ammirati', 's.ammirati@gmail.com', 'Striano', 'ammirati'),
-(7, 'Giovanni Salvati', 'giosalvati@gmail.com', 'Napoli', 'salvati'),
-(8, 'Giuseppe Bellino', 'gbellino@gmail.com', 'Terzigno', 'bellini'),
-(9, 'Mirko_PROLOLGAMER', 'm.aliberti@gmail.com', 'Siano', 'aliberti'),
-(10, 'Alex91msn', 'Alex@email.it', 'Pesciola', 'pasword');
+(1, 'Rodrigo Calvo', 'rodrigo@gmail.com', 'Oviedo', 'rodrimepone'),
+(2, 'Manuel', 'saradifelice@hotmail.com', 'Salerno', 'saradifelice'),
+(3, 'Alessandro Guaion', 'v.noviello@gmail.com', 'Sala Consilina', 'vnoviello'),
+(4, 'Martina Lombardi', 'Lombardim@live.it', 'Caserta', '123456'),
+(5, 'Severino Ammirati', 's.ammirati@gmail.com', 'Striano', 'ammirati'),
+(6, 'Giovanni Salvati', 'giosalvati@gmail.com', 'Napoli', 'salvati'),
+(7, 'Giuseppe Bellino', 'gbellino@gmail.com', 'Terzigno', 'bellini'),
+(8, 'Mirko_PROLOLGAMER', 'm.aliberti@gmail.com', 'Siano', 'aliberti'),
+(9, 'Alex91msn', 'Alex@email.it', 'Pesciola', 'pasword');
 
 --
 -- Struttura della tabella `admin`
 --
-CREATE TABLE admin (
+CREATE TABLE `admin` (
 `KEYUTENTE` int(11) NOT NULL,
 `ID` varchar(32) DEFAULT NULL,
 `EMAIL` varchar(40) DEFAULT NULL,
@@ -228,10 +226,10 @@ CREATE TABLE admin (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
-–- Dump dei dati per la tabella `admin`
+-- s
 --
 INSERT INTO `admin` (`KEYUTENTE`, `ID`, `EMAIL`, `PASS`) VALUES
-(1, ‘admin’, ‘admin@admin.com’, ‘admin’);
+(1, 'admin', 'admin@admin.com', 'admin');
 
 
 
@@ -247,10 +245,10 @@ ALTER TABLE `annuncio`
   ADD KEY `KEYUTENTE` (`KEYUTENTE`);
 
 --
--- Indici per le tabelle `appunti`
+-- Indici per le tabelle `corsi`
 --
-ALTER TABLE `appunti`
-  ADD PRIMARY KEY (`KEYAPPUNTI`),
+ALTER TABLE `corsi`
+  ADD PRIMARY KEY (`KEYCORSI`),
   ADD KEY `KEYUTENTE` (`KEYUTENTE`);
 
 --
@@ -268,11 +266,11 @@ ALTER TABLE `tagperannuncio`
   ADD KEY `KEYANNUNCIO` (`KEYANNUNCIO`);
 
 --
--- Indici per le tabelle `tagperappunti`
+-- Indici per le tabelle `tagpercorsi`
 --
-ALTER TABLE `tagperappunti`
-  ADD PRIMARY KEY (`KEYTAG`,`KEYAPPUNTI`),
-  ADD KEY `KEYAPPUNTI` (`KEYAPPUNTI`);
+ALTER TABLE `tagpercorsi`
+  ADD PRIMARY KEY (`KEYTAG`,`KEYCORSI`),
+  ADD KEY `KEYCORSI` (`KEYCORSI`);
 
 --
 -- Indici per le tabelle `utente`
@@ -297,10 +295,10 @@ ALTER TABLE `admin`
 ALTER TABLE `annuncio`
   MODIFY `KEYANNUNCIO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT per la tabella `appunti`
+-- AUTO_INCREMENT per la tabella `corsi`
 --
 ALTER TABLE `corsi`
-  MODIFY `KEYAPPUNTI` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `KEYCORSI` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT per la tabella `tag`
 --
@@ -327,10 +325,10 @@ ALTER TABLE `annuncio`
   ADD CONSTRAINT `annuncio_ibfk_1` FOREIGN KEY (`KEYUTENTE`) REFERENCES `utente` (`KEYUTENTE`) ON DELETE CASCADE ON UPDATE SET NULL;
 
 --
--- Limiti per la tabella `appunti`
+-- Limiti per la tabella `corsi`
 --
 ALTER TABLE `corsi`
-  ADD CONSTRAINT `appunti_ibfk_1` FOREIGN KEY (`KEYUTENTE`) REFERENCES `utente` (`KEYUTENTE`) ON DELETE CASCADE ON UPDATE SET NULL;
+  ADD CONSTRAINT `corsi_ibfk_1` FOREIGN KEY (`KEYUTENTE`) REFERENCES `utente` (`KEYUTENTE`) ON DELETE CASCADE ON UPDATE SET NULL;
 
 --
 -- Limiti per la tabella `tagperannuncio`
@@ -340,11 +338,11 @@ ALTER TABLE `tagperannuncio`
   ADD CONSTRAINT `tagperannuncio_ibfk_2` FOREIGN KEY (`KEYANNUNCIO`) REFERENCES `annuncio` (`KEYANNUNCIO`);
 
 --
--- Limiti per la tabella `tagperappunti`
+-- Limiti per la tabella `tagoercorsi`
 --
-ALTER TABLE `tagperappunti`
-  ADD CONSTRAINT `tagperappunti_ibfk_1` FOREIGN KEY (`KEYTAG`) REFERENCES `tag` (`KEYTAG`),
-  ADD CONSTRAINT `tagperappunti_ibfk_2` FOREIGN KEY (`KEYAPPUNTI`) REFERENCES `appunti` (`KEYAPPUNTI`);
+ALTER TABLE `tagpercorsi`
+  ADD CONSTRAINT `tagpercorsi_ibfk_1` FOREIGN KEY (`KEYTAG`) REFERENCES `tag` (`KEYTAG`),
+  ADD CONSTRAINT `tagpercorsi_ibfk_2` FOREIGN KEY (`KEYCORSI`) REFERENCES `corsi` (`KEYCORSI`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

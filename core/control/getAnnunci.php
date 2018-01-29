@@ -10,11 +10,15 @@ $annunci = $am->getAllAnnunci();
 $um = new UtenteManager();
 
 $usersNameAds = array();
+
 for($k=0; $k<count($annunci); $k++){
+
     $keyUser = $annunci[$k]->getKeyUtente();
+
     $user = $um->getUtenteByKeyUtente($keyUser);
 
     array_push($usersNameAds,$user->getId());
+
 }
 
 
