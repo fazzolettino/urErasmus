@@ -195,7 +195,7 @@ list-style-image: url('LOGOCAMBRIDGE.png');
     <div class="container" style="margin-top: 10%;">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                <h2>Universities List</h2>
+                <h2>Classes list</h2>
 		 </ul>
 	 </form>
 </section>
@@ -220,13 +220,7 @@ list-style-image: url('LOGOCAMBRIDGE.png');
                     <div class="row">
                         <div class="col-lg-12 col-md 12- col-sm-12 col-xs-12 text-center">
                             <p><b> University:</b>&nbsp <?php echo $annunci[$i]->getTitolo(); ?></p>
-                            <p><b> Descrizione: </b>&nbsp <?php echo $annunci[$i]->getDescrizione(); ?></p>
-                            <p><b> Tag:</b>&nbsp <?php $tags = $annunci[$i]->getTags();
-
-                                for ($j = 0; $j < count($tags); $j++) {
-                                    echo $tags[$j]->getNome() . " ";
-                                }
-                                ?></p>
+                            <p><b> Class: </b>&nbsp <?php echo $annunci[$i]->getDescrizione(); ?></p>
                             <p></p>
                             <?php if (isset($_SESSION['user'])) { ?>
                                 <p><b> Contact:</b>&nbsp <?php echo $annunci[$i]->getContatto(); ?></p>
