@@ -1,4 +1,7 @@
+<?php include_once BEANS_DIR . "Utente.php"; ?>
 
+
+<!-- -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,10 +44,10 @@
                         <input type="hidden" name="search_param" value="Appunti" id="search_param">
                         <input type="text" name="user_param" class="form-control"  placeholder="Search">
                         <span class="input-group-btn">
-								<button style="width: 100%" class="btn btn-default" type="submit">
-									<span class="glyphicon glyphicon-search"></span>
-								</button>
-							</span>
+                                <button style="width: 100%" class="btn btn-default" type="submit">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </span>
                         </div>
                     </form>
                 </div>
@@ -58,10 +61,16 @@
                     <ul class="nav navbar-nav navbar-right">
                             
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/getAnnunci";?>" ><span style="color:#848484">UR</span>University</a></li>
-                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/categorie";?>"><span style="color:#848484">UR</span>Annunci</a></li>
-                        <?php if(isset($_SESSION["user"])){?>
+                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/categorie";?>"><span style="color:#848484">UR</span>Annunci</a></li>                        
+                            <?php if (isset($_SESSION['user'])){
+                                $utente = new Utente(null, null, null, null, null);
+                                $utente = unserialize($_SESSION['user']);
+                                if (strcmp($utente->getId(), "admin") == 0){
+                            ?> <!-- Es ADMIN-->
+                            <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/admin";?>"><span style="color:#848484">UR</span>Profile</a></li>
+                        <?php  }else { ?> <!-- NO Es ADMIN-->
                             <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/profiloUtente";?>"><span style="color:#848484">UR</span>Profile</a></li>
-                        <?php } ?>
+                        <?php } }?>
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO ."/help";?>"><span style="color:#848484">UR</span>Help</a></li>
                         <li class="page-scroll">
                             <?php if(isset($_SESSION["user"])){?>
@@ -80,4 +89,4 @@
 </nav>
 </body>
 
-</html>
+</html> 

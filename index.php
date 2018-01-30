@@ -38,7 +38,7 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
         define('IP', $_SERVER['REMOTE_ADDR']);
     }
     session_start(); //facciamo partire la sessione
-
+    
     if (!defined("TESTING")) {
         switch (isset($_URL[0]) ? $_URL[0] : '') {
             case 'search':
@@ -83,6 +83,12 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
             case 'myAppunti':
                 include_once CONTROL_DIR ."myAppuntiControl.php";
                 break;
+            case 'Users':
+                include_once CONTROL_DIR ."UtentiControl.php";
+                break;
+            case 'admin': 
+                include_once VIEW_DIR ."admin.php";
+                break;
             case 'myAnnunci':
                 include_once CONTROL_DIR ."myAnnunciControl.php";
                 break;
@@ -100,7 +106,7 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
                 break;
             case 'inserisciAnnuncio':
                 include_once VIEW_DIR . "inserisciAnnuncio.php";
-                break;
+                break; 
             case 'inserisciAppunti':
                 include_once VIEW_DIR . "inserisciAppunti.php";
                 break;

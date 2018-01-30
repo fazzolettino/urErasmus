@@ -14,6 +14,7 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
     $username = $_POST['username'] ;
     $password = $_POST['password'];
 
+
     if($manager->checkLogin($username,$password)){
         $user = $manager->getUtenteById($username);
         if (strcmp($user->getId(),"admin")==0){
