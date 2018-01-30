@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 text-center">
+            <div class="text-center">
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group">
                         <h4>Username</h4>
@@ -50,12 +50,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 text-center">
+        </div>
+        <div class="row">
+            <div class="text-center">
                 <div class="row">
                     <br>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="text-center">
                         <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="text-center">
                                 <a href="<?php echo DOMINIO_SITO;?>/myAnnunci">
                                     <button id="my-annunci" class="btn btn-success btn-lg">
                                         I Miei Annunci
@@ -65,7 +67,7 @@
                         </div>
                         <br>
                         <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="text-center">
                                 <a href="<?php echo DOMINIO_SITO;?>/inserisciAnnuncio">
                                     <button class="btn btn-success btn-lg">
                                         Aggiungi nuovo Annuncio

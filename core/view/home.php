@@ -42,7 +42,7 @@
             <div class="container">
                 <div class="carousel-caption">
                     <p>ESN SALERNO</p>
-                    <p><a class="btn btn-lg btn-primary" href="<?php echo DOMINIO_SITO;?>/categorie" role="button">Visit the website</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="https://www.facebook.com/ESNSalerno" role="button">Facebook page</a></p>
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
             <div class="container">
                 <div class="carousel-caption">
                     <p>AEGEE SALERNO</p>
-                    <p><a class="btn btn-lg btn-primary" href="<?php echo DOMINIO_SITO;?>/getAnnunci" role="button">Visit the website</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="https://www.facebook.com/aegeesalerno/" role="button">Facebook page</a></p>
                 </div>
             </div>
         </div>
