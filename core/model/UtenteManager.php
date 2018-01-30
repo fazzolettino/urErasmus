@@ -83,6 +83,18 @@ class UtenteManager
         return false;
     }
 
+    public function checkAdmin($username,$password){
+        $checkLogin ="SELECT * FROM UTENTE WHERE ID ='%s' AND PASS = '%s'";
+        $query = sprintf($checkLogin,$username,$password);
+        $res = mysqli_query(Connector::getConnector(), $query);
+
+        if($res->num_rows >0){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
 
     public function checkLogin($username,$password){
         $checkLogin ="SELECT * FROM UTENTE WHERE ID ='%s' AND PASS = '%s'";

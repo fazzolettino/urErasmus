@@ -16,11 +16,20 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
 
     if($manager->checkLogin($username,$password)){
         $user = $manager->getUtenteById($username);
+        if (strcmp($user->getId(),"admin")==0){
+        $_SESSION['user'] = serialize($user);
+
+        $_SESSION['toast-type'] = "success";
+        $_SESSION['toast-message'] = "Bentornato ".$user->getId()." !";
+        header ("location: ".DOMINIO_SITO."/admin");
+        }else{
         $_SESSION['user'] = serialize($user);
 
         $_SESSION['toast-type'] = "success";
         $_SESSION['toast-message'] = "Bentornato ".$user->getId()." !";
         header ("location: ".DOMINIO_SITO."/home");
+        }
+
 
     }
     else{
