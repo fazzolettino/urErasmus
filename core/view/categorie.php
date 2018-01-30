@@ -26,9 +26,7 @@
                 <div style="margin:2%;float:right;">
                     <?php if(isset($_SESSION["user"])){ ?>
                         <a href="<?php echo DOMINIO_SITO;?>/inserisciAppunti">
-                            <button type="submit" class="btn btn-success btn-lg">
-                                Aggiungi nuovi appunti +
-                            </button>
+                            
                         </a>
                     <?php }?>
                 </div>
