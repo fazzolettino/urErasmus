@@ -199,14 +199,6 @@ list-style-image: url('LOGOCAMBRIDGE.png');
 		 </ul>
 	 </form>
 </section>
-                
-                
-
-                <?php if(isset($_SESSION["user"])){ ?>
-                    <a href="<?php echo DOMINIO_SITO;?>/inserisciAnnuncio">
-                        <button type="submit" class="btn btn-success btn-lg" style="float: right;">Aggiungi nuovo Annuncio +</button>
-                    </a>
-                <?php } ?>
 
             </div>
         </div>

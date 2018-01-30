@@ -50,14 +50,8 @@ class UtenteManager
         return $keyUtente;
     }
 
-    /**
-    public function deleteUser($user){
-        $deleteSql = "DELETE FROM UTENTE (ID, EMAIL, CITTA, PASS) VALUES ('%s', '%s', '%s', '%s');";
-        $query = sprintf($insertSql,$user->getId(),$user->getEmail(),$user->getCitta(),$user->getPassword());
-        mysqli_query(Connector::getConnector(), $query);
-        $keyUtente = $this->lastInsertKey();
-        return $keyUtente;
-    } */
+    
+
 
     public function updateUser($keyUtente,$utente){
         $updateSql = "UPDATE UTENTE SET ID='%s', EMAIL='%s', CITTA='%s', PASS='%s' WHERE KEYUTENTE = '%s'";

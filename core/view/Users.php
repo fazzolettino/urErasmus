@@ -3,9 +3,17 @@
 <html>
 
 <head>
-    <title>URErasmus | ADMIN</title>
-    <?php include_once VIEW_DIR . "headerStart.php"?>
+    <title>URErasmus | Admin</title>
+    <?php include_once VIEW_DIR . "headerStart.php" ?>
+    <?php  include_once MODEL_DIR . "UtenteManager.php"?>
 </head>
+
+<script type="text/javascript">
+    function buttonCancellare (){
+
+        //Cancellare $utenti[$i] de la database
+    }
+</script>
 
 <body class="index" class="text-center">
 <?php include_once VIEW_DIR . "header.php"?>
@@ -22,12 +30,12 @@
             <div class="text-center">
                     <div class="form-group col-xs-12 floating-label-form-group">
                         <h4>Username</h4>
-                        <?php for($i=0; $i < count($utenti); $i++) { ?>
+                        <?php for($i=0; $i < count($utenti); $i++) { 
+                            if (strcmp($utenti[$i]->getId(), 'admin')!=0) { ?>
                         <p><?php echo $utenti[$i]->getId();?></p>
-                        <?php } ?>
+                        <?php } }?>
                         <p class="help-block text-danger"></p>
-                    
-                </div>
+                    </div>
             </div>
         </div>
 
@@ -36,9 +44,10 @@
 
                     <div class="form-group col-xs-12 floating-label-form-group">
                         <h4>Email</h4>
-                        <?php for($i=0; $i < count($utenti); $i++) { ?>                        
+                        <?php for($i=0; $i < count($utenti); $i++) {    
+                            if (strcmp($utenti[$i]->getId(), 'admin')!=0) { ?>                   
                         <p><?php echo $utenti[$i]->getEmail();?></p>
-                        <?php } ?>
+                        <?php }} ?>
                         <p class="help-block text-danger"></p>
                     </div>
                 
@@ -46,10 +55,13 @@
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
                     <div class="form-group col-xs-12 floating-label-form-group">
                         <h4>Città</h4>
-                        <?php for($i=0; $i < count($utenti); $i++) { ?>
-                        <p><?php echo $utenti[$i]->getCitta();?></p>
-                        <?php } ?>
+                        <?php for($i=0; $i < count($utenti); $i++) { 
+                            if (strcmp($utenti[$i]->getId(), 'admin')!=0) { ?>
+                        <p><?php echo $utenti[$i]->getCitta();?>&nbsp&nbsp
+                            <button type="button" onclick="buttonCancellare()"></button></p>
+                        <?php }} ?>
                         <p class="help-block text-danger"></p>
+
                     </div>
                 
             </div>
