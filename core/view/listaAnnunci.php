@@ -219,7 +219,7 @@ list-style-image: url('LOGOCAMBRIDGE.png');
                     ?>
                     <div class="row">
                         <div class="col-lg-12 col-md 12- col-sm-12 col-xs-12 text-center">
-                            <p><b> Titolo:</b>&nbsp <?php echo $annunci[$i]->getTitolo(); ?></p>
+                            <p><b> University:</b>&nbsp <?php echo $annunci[$i]->getTitolo(); ?></p>
                             <p><b> Descrizione: </b>&nbsp <?php echo $annunci[$i]->getDescrizione(); ?></p>
                             <p><b> Tag:</b>&nbsp <?php $tags = $annunci[$i]->getTags();
 
@@ -227,11 +227,11 @@ list-style-image: url('LOGOCAMBRIDGE.png');
                                     echo $tags[$j]->getNome() . " ";
                                 }
                                 ?></p>
-                            <p><b> Utente:</b>&nbsp <?php echo $usersNameAds[$i] ?> </p>
+                            <p></p>
                             <?php if (isset($_SESSION['user'])) { ?>
-                                <p><b> Contatto:</b>&nbsp <?php echo $annunci[$i]->getContatto(); ?></p>
+                                <p><b> Contact:</b>&nbsp <?php echo $annunci[$i]->getContatto(); ?></p>
                             <?php } ?>
-                            <p><b> Data:</b>&nbsp <?php echo $annunci[$i]->getDataDiCaricamento(); ?></p>
+                            <p><b> Date:</b>&nbsp <?php echo $annunci[$i]->getDataDiCaricamento(); ?></p>
                         </div>
                     </div>
                     <hr>

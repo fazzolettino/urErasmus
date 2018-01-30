@@ -52,7 +52,7 @@
 
             <!-- LINK -->
 
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="">
                 <div class="collapse navbar-collapse"
                      id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
