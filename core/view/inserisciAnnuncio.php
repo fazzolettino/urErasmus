@@ -7,7 +7,7 @@
 
 <head>
 
-    <title> URErasmus | Inserisci Annuncio</title>
+    <title> URErasmus | Add new class</title>
     <?php include_once VIEW_DIR . "headerStart.php"?>
 
 </head>
@@ -22,7 +22,7 @@
     <div class="container" style="margin-top: 10%;">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2>Inserisci Annuncio</h2>
+                <h2>Add new class</h2>
                 <hr class="star-primary">
             </div>
         </div>
@@ -31,30 +31,23 @@
                 <form action="<?php echo DOMINIO_SITO;?>/insertAnnuncio" method="post">
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Titolo</label>
-                            <input type="text" class="form-control" placeholder="Titolo" id="titolo" name="titolo" required data-validation-required-message="Inserisci un titolo.">
+                            <label>University</label>
+                            <input type="text" class="form-control" placeholder="University" id="titolo" name="titolo" required data-validation-required-message="Insert university">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
 
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Tags</label>
-                            <input type="text" class="form-control" placeholder="Tags...Inserisci i tag separandoli da uno spazio" id="tags" name="tags" required data-validation-required-message="Inserisci almeno un tag.">
+                            <label>Class</label>
+                            <input type="text" class="form-control" placeholder="Class" id="descrizione" name="descrizione" required data-validation-required-message="Insert class"></textarea>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Descrizione</label>
-                            <textarea rows="5" class="form-control" placeholder="Descrizione" id="descrizione" name="descrizione" required data-validation-required-message="Inserisci una descrizione."></textarea>
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Contatto</label>
-                            <input type="text" class="form-control" placeholder="Contatto" id="contatto" name="contatto" required data-validation-required-message="Inserisci almeno un tag.">
+                            <label>Contact</label>
+                            <input type="text" class="form-control" placeholder="Contact" id="contatto" name="contatto" required data-validation-required-message="Insert contact">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>

@@ -46,7 +46,7 @@
                             <div class="text-center">
                                 <a href="<?php echo DOMINIO_SITO;?>/inserisciAnnuncio">
                                     <button class="btn btn-success btn-lg">
-                                        Add new Annunci
+                                        Add new class
                                     </button>
                                 </a>
                             </div>
