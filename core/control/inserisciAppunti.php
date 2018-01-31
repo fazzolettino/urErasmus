@@ -14,20 +14,12 @@ if(isset($_SESSION['user'])) {
         header("Location:" . DOMINIO_SITO . "/inserisciAppunti");
     }
 
-    if (isset($_POST['tags'])) {
-        $tags = $_POST['tags'];
-        $result = explode(" ", $tags);
 
-    } else {
-        $_SESSION['toast-type'] = "error";
-        $_SESSION['toast-message'] = "Tag/s non inserito/i";
-        header("Location:" . DOMINIO_SITO . "/inserisciAppunti");
-    }
 
     if (isset($_POST['categorie'])) {
 
-        if($_POST['categorie'] !="Matematica" && $_POST['categorie']!="Biologia" && $_POST['categorie']!="Fisica" && $_POST['categorie']!="Informatica"
-                            && $_POST['categorie']!="Scienze Ambientali" && $_POST['categorie']!="Chimica"){
+
+        if($_POST['categorie'] !="Fun Events" && $_POST['categorie']!="University Events"){
 
             header("Location:".DOMINIO_SITO."/inserisciAppunti");
             $_SESSION['toast-type'] = "error";
@@ -43,11 +35,18 @@ if(isset($_SESSION['user'])) {
         header("Location:" . DOMINIO_SITO . "/inserisciAppunti");
     }
 
-    if (isset($_POST['descrizione'])) {
-        $descrizione = $_POST['descrizione'];
+    if (isset($_POST['annoCorso'])) {
+
+        $annoCorso = $_POST['annoCorso'];
+
     } else {
-        $descrizione = "";
+        $_SESSION['toast-type'] = "error";
+        $_SESSION['toast-message'] = "Anno del file non inserito";
+        header("Location:" . DOMINIO_SITO . "/inserisciAppunti");
     }
+
+
+
 
     if (isset($_FILES['file'])) {
         $_FILES['file']['name'];
@@ -83,8 +82,9 @@ if(isset($_SESSION['user'])) {
     $keyUtente = $user->getKeyUtente();
     $keyAppunti = 0;
     $manager = new AppuntiManager();
-    $appunti = new Appunti($keyAppunti, $nome, $categoria, $descrizione, $path, $data, $keyUtente, $result);
+    $appunti = new Appunti($keyAppunti, $nome, $categoria, $annoCorso, $data, $keyUtente);
     $manager->insertAppunti($appunti);
+
 
     $_SESSION['toast-type'] = "success";
     $_SESSION['toast-message'] = "File inserito con successo!";

@@ -104,8 +104,8 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
             case 'help':
                 include_once VIEW_DIR . "help.php";
                 break;
-            case 'inserisciAnnuncio':
-                include_once VIEW_DIR . "inserisciAnnuncio.php";
+            case 'inserisciAnnunci':
+                include_once VIEW_DIR . "inserisciAnnunci.php";
                 break; 
             case 'inserisciAppunti':
                 include_once VIEW_DIR . "inserisciAppunti.php";

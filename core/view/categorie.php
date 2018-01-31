@@ -4,6 +4,8 @@
 <head>
     <title>URErasmus | Categorie</title>
     <?php include_once VIEW_DIR . "headerStart.php"?>
+     <?php  include_once MODEL_DIR . "AppuntiManager.php"?>
+
 </head>
 
 <body id="page-top" class="index">
@@ -69,8 +71,56 @@
                     <img src="<?php echo DOMINIO_SITO;?>/img/Events/scienze%20ambientali.png" class="img-responsive" alt="">
                 </a>
             </div>
+            
         </div>
-    </div>
+
+
+
+
+                <div class="container">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
+            <div class="text-center">
+                    <div class="form-group col-xs-12 floating-label-form-group">
+                        <h4>Nome</h4>
+                        <?php for($i=0; $i < count($appunti); $i++) { ?>
+                            <p><?php echo $appunti[$i]->getNome();?></p>
+                        <?php } ?>
+                        <p class="help-block text-danger"></p>
+                    </div>
+            </div>
+        </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
+
+
+                    <div class="form-group col-xs-12 floating-label-form-group">
+                        <h4>Categoria</h4>
+                        <?php for($i=0; $i < count($appunti); $i++) {    ?>
+                        <p><?php echo $appunti[$i]->getCategoria();?></p>
+                        <?php } ?>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                
+            </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
+                    <div class="form-group col-xs-12 floating-label-form-group">
+                        <h4>Year</h4>
+                        <?php for($i=0; $i < count($appunti); $i++) {  ?>
+                        <p><?php echo $appunti[$i]->getAnnoCorso();?>&nbsp&nbsp
+                        <?php } ?>
+                        <p class="help-block text-danger"></p>
+
+                    </div>
+                
+            </div>  
+            </div>
+        </div>
+
+
+<?php  ?>
+
+    </div
+
 </section>
 
 

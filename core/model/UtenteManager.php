@@ -68,9 +68,9 @@ class UtenteManager
                 $user = new Utente($r['KEYUTENTE'],$r['ID'], $r['EMAIL'], $r['CITTA'], $r['PASS']);
                 return $user;
             }
-        }
-
+        }else{
         return false;
+    }
     }
 
     public function getUtenteById($id){

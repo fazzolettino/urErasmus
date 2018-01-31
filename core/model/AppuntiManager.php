@@ -26,12 +26,11 @@ class AppuntiManager
     }
 
     public function insertAppunti($appunti){
-        $insertSql = "INSERT INTO APPUNTI (NOME, CATEGORIA, DESCRIZIONE, PATH, DATADICARICAMENTO, KEYUTENTE) 
+        $insertSql = "INSERT INTO APPUNTI (KEYCORSI, NOME, CATEGORIA, ANNOCORSO, DATADICARICAMENTO, KEYUTENTE) 
                 VALUES ('%s', '%s', '%s', '%s','%s', '%s')" ;
-        $query = sprintf($insertSql,$appunti->getNome(),$appunti->getCategoria(),$appunti->getDescrizione(),$appunti->getPath(),$appunti->getDataDiCaricamento(),$appunti->getKeyUtente());
+        $query = sprintf($insertSql, null, $appunti->getNome(), $appunti->getCategoria(), $appunti->getAnnoCorso(), $appunti->getDataDiCaricamento(), $appunti->getKeyUtente());
         mysqli_query(Connector::getConnector(), $query);
         $keyAppunti = $this->lastInsertKey();
-        $this->tagManager->insertTagsByAppunti($keyAppunti,$appunti->getListTags());
     }
 
 
@@ -41,8 +40,7 @@ class AppuntiManager
         $listAppunti = array();
         if ($res) {
             while ($obj = $res->fetch_assoc()) {
-                $listTag = $this->tagManager->getTagByAppunti($obj['KEYAPPUNTI']);
-                $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
+                $appunti = new Appunti($obj['KEYCORSI'],$obj['NOME'],$obj['CATEGORIA'],$obj['ANNOCORSO'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE']);
                 array_push($listAppunti,$appunti);
             }
         }

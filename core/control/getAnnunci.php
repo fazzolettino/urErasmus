@@ -17,7 +17,7 @@ for($k=0; $k<count($annunci); $k++){
 
     $user = $um->getUtenteByKeyUtente($keyUser);
 
-    array_push($usersNameAds,$user->getId());
+    array_push($usersNameAds,$user);
 
 }
 

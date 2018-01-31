@@ -9,14 +9,12 @@
 class Appunti
 {
 
-    private $keyFile;
+    private $keyCorsi;
     private $nome;
     private $categoria;
-    private $descrizione;
-    private $path;
+    private $annocorso;
     private $dataDiCaricamento;
     private $keyUtente;
-    private $listTags;
 
     /**
      * Appunti constructor.
@@ -30,137 +28,68 @@ class Appunti
      * @param $keyUtente
      * @param $listTags
      */
-    public function __construct($keyFile, $nome, $categoria, $descrizione,$path, $dataDiCaricamento, $keyUtente, $listTags)
+    public function __construct($keyCorsi, $nome, $categoria, $annocorso, $dataDiCaricamento, $keyUtente)
     {
-        $this->keyFile = $keyFile;
+        $this->keyCorsi = $keyCorsi;
         $this->nome = $nome;
         $this->categoria = $categoria;
-        $this->descrizione = $descrizione;
-        $this->path = $path;
+        $this->annocorso = $annocorso;
         $this->dataDiCaricamento = $dataDiCaricamento;
         $this->keyUtente = $keyUtente;
-        $this->listTags = $listTags;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getKeyFile()
-    {
-        return $this->keyFile;
+    public function getKeyCorsi(){
+        return $this->keyCorsi;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getNome()
-    {
+    public function setKeyCorsi($kc){
+        $this->KeyCorsi=$kc;
+    } 
+
+    public function getNome(){
         return $this->nome;
     }
 
-    /**
-     * @param mixed $nome
-     */
-    public function setNome($nome)
-    {
-        $this->nome = $nome;
+    public function setNome($nome){
+        $this->nome=$nome;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getCategoria()
-    {
+    public function getCategoria(){
         return $this->categoria;
     }
 
-    /**
-     * @param mixed $categoria
-     */
-    public function setCategoria($categoria)
-    {
-        $this->categoria = $categoria;
+    public function setCategoria($kc){
+        $this->categoria=$kc;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getDescrizione()
-    {
-        return $this->descrizione;
+    public function getAnnoCorso(){
+        return $this->annocorso;
     }
 
-    /**
-     * @param mixed $descrizione
-     */
-    public function setDescrizione($descrizione)
-    {
-        $this->descrizione = $descrizione;
+    public function setAnnoCorso($kc){
+        $this->annocorso=$kc;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getPath()
-    {
-        return $this->path;
-    }
-
-    /**
-     * @param mixed $path
-     */
-    public function setPath($path)
-    {
-        $this->path = $path;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDataDiCaricamento()
-    {
+    public function getDataDiCaricamento(){
         return $this->dataDiCaricamento;
     }
 
-    /**
-     * @param mixed $dataDiCaricamento
-     */
-    public function setDataDiCaricamento($dataDiCaricamento)
-    {
-        $this->dataDiCaricamento = $dataDiCaricamento;
+    public function setDataDiCaricamento($kc){
+        $this->dataDiCaricamento=$kc;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getKeyUtente()
-    {
-        return $this->keyUtente;
+    public function getKeyUtente(){
+        return $this->categoria;
     }
 
-    /**
-     * @param mixed $keyUtente
-     */
-    public function setKeyUtente($keyUtente)
-    {
-        $this->keyUtente = $keyUtente;
-    }
+    public function setKeyUtente($kc){
+        $this->keyUtente=$kc;
+    } 
 
-    /**
-     * @return mixed
-     */
-    public function getListTags()
-    {
-        return $this->listTags;
-    }
 
-    /**
-     * @param mixed $listTags
-     */
-    public function setListTags($listTags)
-    {
-        $this->listTags = $listTags;
-    }
+
+   
+    
 
 
 }

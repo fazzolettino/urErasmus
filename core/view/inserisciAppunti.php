@@ -45,10 +45,10 @@ php if(!(isset($_SESSION['user']))){
                         <div class="row control-group">
                             <div class="form-group col-xs-12 controls">
                                 <br>
-                                <input id="mat" type="radio" name="categorie" value="Divertimento"/>
+                                <input id="mat" type="radio" name="categorie" value="Fun Events"/>
                                 <label for="mat">Fun Events</label><br>
 
-                                <input id="bio" type="radio" name="categorie" value="University"/>
+                                <input id="bio" type="radio" name="categorie" value="University Events"/>
                                 <label for="bio">University Events</label><br>
 
                                 <p class="help-block text-danger"></p>
@@ -56,12 +56,18 @@ php if(!(isset($_SESSION['user']))){
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Description</label>
-                                <textarea rows="2" class="form-control" placeholder="Descrizione" id="descrizione" name="Description" required data-validation-required-message="Inserisci una descrizione."></textarea>
+                                <label>annoCorso</label>
+                                <textarea rows="2" class="form-control" placeholder="Year of event" name="annoCorso" required data-validation-required-message="Inserisci una descrizione."></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
-
+                        <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>dataDiCaricamento</label>
+                            <input type="text" class="form-control" placeholder="Date" name="dataDiCaricamento" required data-validation-required-message="Inserisci un nome.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Scegli file</label>
