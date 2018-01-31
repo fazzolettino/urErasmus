@@ -58,7 +58,6 @@
                         <?php for($i=0; $i < count($utenti); $i++) { 
                             if (strcmp($utenti[$i]->getId(), 'admin')!=0) { ?>
                         <p><?php echo $utenti[$i]->getCitta();?>&nbsp&nbsp
-                            <button type="button" onclick="buttonCancellare()"></button></p>
                         <?php }} ?>
                         <p class="help-block text-danger"></p>
 

@@ -10,10 +10,11 @@
                 <div class="footer-col col-md-6">
                     <h3>TEAM URErasmus</h3>
                     <p>
+                        Rodrigo Calvo<br>
                         Manuel Vitolo<br>
-                        Mirko Aliberti<br>
                         Alessandro Romano<br>
-                        Rodrigo Calvo
+                        Mirko Aliberti
+                        
                     </p>
                 </div>
                 <div class="footer-col col-md-6">
