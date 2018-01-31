@@ -1,13 +1,11 @@
-<?php if(!(isset($_SESSION['user']))){
+php if(!(isset($_SESSION['user']))){
     header("Location:".DOMINIO_SITO);
 }?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-
-    <title>URErasmus | Inserisci Appunti</title>
+    <title>URErasmus | Insert Event</title>
     <?php include_once VIEW_DIR . "headerStart.php"?>
 
 </head>
@@ -22,7 +20,7 @@
     <div class="container" style="margin-top: 10%;">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2>Inserisci Appunti</h2>
+                <h2>Insert Event</h2>
                 <hr class="star-primary">
             </div>
         </div>
@@ -31,19 +29,13 @@
                 <form action="<?php echo DOMINIO_SITO;?>/insertAppunti" method="post" enctype="multipart/form-data">
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Nome</label>
-                            <input type="text" class="form-control" placeholder="Nome" id="nome" name="nome" required data-validation-required-message="Inserisci un nome.">
+                            <label>Name</label>
+                            <input type="text" class="form-control" placeholder="Name" id="nome" name="nome" required data-validation-required-message="Inserisci un nome.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
 
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Tags</label>
-                            <input type="text" class="form-control" placeholder="Tags...Inserisci i tag separandoli da uno spazio" id="tags" name="tags" required data-validation-required-message="Inserisci almeno un tag.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
+                    
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Categorie</label>
@@ -52,31 +44,20 @@
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 controls">
-                                <input id="mat" type="radio" name="categorie" value="Matematica"/>
-                                <label for="mat">Matematica</label><br>
+                                <br>
+                                <input id="mat" type="radio" name="categorie" value="Divertimento"/>
+                                <label for="mat">Fun Events</label><br>
 
-                                <input id="bio" type="radio" name="categorie" value="Biologia"/>
-                                <label for="bio">Biologia</label><br>
-
-                                <input id="chi" type="radio" name="categorie" value="Chimica"/>
-                                <label for="chi">Chimica</label><br>
-
-                                <input id="fis" type="radio" name="categorie" value="Fisica"/>
-                                <label for="fis">Fisica</label><br>
-
-                                <input id="inf" type="radio" name="categorie" value="Informatica"/>
-                                <label for="inf">Informatica</label><br>
-
-                                <input id="sci" type="radio" name="categorie" value="Scienze Ambientali"/>
-                                <label for="sci">Scienze Ambientali</label>
+                                <input id="bio" type="radio" name="categorie" value="University"/>
+                                <label for="bio">University Events</label><br>
 
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Descrizione</label>
-                                <textarea rows="5" class="form-control" placeholder="Descrizione" id="descrizione" name="descrizione" required data-validation-required-message="Inserisci una descrizione."></textarea>
+                                <label>Description</label>
+                                <textarea rows="2" class="form-control" placeholder="Descrizione" id="descrizione" name="Description" required data-validation-required-message="Inserisci una descrizione."></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -93,8 +74,8 @@
                         <div id="success"></div>
                         <div class="row">
                             <div class="form-group col-xs-12" style="float: right;">
-                                <button type="reset" class="btn btn-danger btn-lg" style="float: right;">Cancella</button>
-                                <button type="submit" class="btn btn-success btn-lg" style="float: right;">Inserisci</button>
+                                <button type="reset" class="btn btn-danger btn-lg" style="float: right;">Cancel</button>
+                                <button type="submit" class="btn btn-success btn-lg" style="float: right;">Insert</button>
                             </div>
                         </div>
                 </form>

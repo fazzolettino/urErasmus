@@ -7,7 +7,7 @@
 <head>
 </head>
 <body>
-<nav id="mainNav"class="navbar navbar-default navbar-fixed-top navbar-custom affix-top">
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom affix-top">
     <div class="container">
         <div class="row"> 
 
@@ -61,7 +61,7 @@
                     <ul class="nav navbar-nav navbar-right">
                             
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/getAnnunci";?>" ><span style="color:#848484">UR</span>University</a></li>
-                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/categorie";?>"><span style="color:#848484">UR</span>Annunci</a></li>                        
+                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/categorie";?>"><span style="color:#848484">UR</span>Events</a></li>                        
                             <?php if (isset($_SESSION['user'])){
                                 $utente = new Utente(null, null, null, null, null);
                                 $utente = unserialize($_SESSION['user']);
