@@ -1,4 +1,4 @@
-php if(!(isset($_SESSION['user']))){
+<?php if(!(isset($_SESSION['user']))){
     header("Location:".DOMINIO_SITO);
 }?>
 <!DOCTYPE html>
@@ -50,7 +50,6 @@ php if(!(isset($_SESSION['user']))){
 
                                 <input id="bio" type="radio" name="categorie" value="University Events"/>
                                 <label for="bio">University Events</label><br>
-
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -68,20 +67,15 @@ php if(!(isset($_SESSION['user']))){
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Scegli file</label>
-                                <input type="file" placeholder="Nessun file scelto.." name="file">
-                            </div>
-                        </div>
+                        
 
 
                         <br>
                         <div id="success"></div>
                         <div class="row">
                             <div class="form-group col-xs-12" style="float: right;">
-                                <button type="reset" class="btn btn-danger btn-lg" style="float: right;">Cancel</button>
-                                <button type="submit" class="btn btn-success btn-lg" style="float: right;">Insert</button>
+                                <a href="/admin"><button  class="btn btn-danger btn-lg" style="float: right;">Cancel</button>
+                                <a href="/admin"><button type="submit" class="btn btn-success btn-lg" style="float: right;">Insert</button>
                             </div>
                         </div>
                 </form>
