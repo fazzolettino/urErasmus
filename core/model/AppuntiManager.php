@@ -111,5 +111,11 @@ class AppuntiManager
 
     }
 
+    public function cancellaAppunti($keyCorsi){
+        $selectSql = "SELECT * FROM `appunti` WHERE `KEYCORSI` = '3'";
+        
+
+    }
+
 
 }

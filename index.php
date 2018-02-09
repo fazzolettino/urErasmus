@@ -101,6 +101,9 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
             case 'home':
                 include_once VIEW_DIR . "home.php";
                 break;
+            case 'AdminEvents':
+                include_once CONTROL_DIR . "getAppuntiAdmin.php";
+                break;
             case 'help':
                 include_once VIEW_DIR . "help.php";
                 break;

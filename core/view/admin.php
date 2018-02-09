@@ -61,6 +61,16 @@
                                 </a>
                             </div>
                         </div>
+                        <br>
+                        <div class="row">
+                            <div class="text-center">
+                                <a href="<?php echo DOMINIO_SITO;?>/AdminEvents">
+                                    <button  class="btn btn-success btn-lg">
+                                        Modify the events
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
