@@ -104,6 +104,9 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
             case 'AdminEvents':
                 include_once CONTROL_DIR . "getAppuntiAdmin.php";
                 break;
+            case 'removeAppunti':
+                include_once CONTROL_DIR . "removeAppunti.php";
+                break;
             case 'help':
                 include_once VIEW_DIR . "help.php";
                 break;

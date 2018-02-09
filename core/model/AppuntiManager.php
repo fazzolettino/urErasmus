@@ -112,9 +112,10 @@ class AppuntiManager
     }
 
     public function cancellaAppunti($keyCorsi){
-        $selectSql = "SELECT * FROM `appunti` WHERE `KEYCORSI` = '3'";
-        
-
+        $selectSql = "DELETE FROM `appunti` WHERE `KEYCORSI` = '%s'";
+        $query = sprintf($selectSql,$keyCorsi);
+        $res = mysqli_query(Connector::getConnector(),$query);
+        //echo $query;
     }
 
 

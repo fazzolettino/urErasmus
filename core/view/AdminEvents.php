@@ -8,6 +8,21 @@
 
 </head>
 
+
+<style>
+
+    th{
+        font-size: x-large;
+        padding-right: 4%;
+        padding-top: 1%;
+    }
+
+    .tbl{
+        font-size: xx-large;
+    }
+
+</style>
+
 <body id="page-top" class="index">
 
 <!-- Navigation -->
@@ -36,44 +51,41 @@
         </div>
        
 
-                <div class="container">
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
-            <div class="text-center">
-                    <div class="form-group col-xs-12 floating-label-form-group">
-                        <h4>Nome</h4>
-                        <?php for($i=0; $i < count($appunti); $i++) { ?>
-                            <p><?php echo $appunti[$i]->getNome();?></p>
-                        <?php } ?>
-                        <p class="help-block text-danger"></p>
-                    </div>
-            </div>
-        </div>
 
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
+                    <div class="row">
+                            <div class="col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-border-1 col-xs-10">
+                                <table>
+                                    <tr>
+                                        <th class="tbl">Nome</th>
+                                        <th class="tbl">Categoria</th>
+                                        <th class="tbl">Year</th>
+                                    </tr>
+
+                                    <?php
+
+                                    for($i = 0; $i < count($appunti); $i++) {
+                                        ?>
 
 
-                    <div class="form-group col-xs-12 floating-label-form-group">
-                        <h4>Categoria</h4>
-                        <?php for($i=0; $i < count($appunti); $i++) {    ?>
-                        <p><?php echo $appunti[$i]->getCategoria();?></p>
-                        <?php } ?>
-                        <p class="help-block text-danger"></p>
-                    </div>
-                
-            </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
-                    <div class="form-group col-xs-12 floating-label-form-group">
-                        <h4>Year</h4>
-                        <?php for($i=0; $i < count($appunti); $i++) {  ?>
-                        <p><?php echo $appunti[$i]->getAnnoCorso();?>&nbsp&nbsp
-                        <?php } ?>
-                        <p class="help-block text-danger"></p>
+                                        <tr>
+                                            <th><?php echo $appunti[$i]->getNome()?></th>
+                                            <th><?php echo $appunti[$i]->getCategoria()?></th>
+                                            <th><?php echo $appunti[$i]->getAnnoCorso()?></th>
+                                            <th><a href="<?php echo DOMINIO_SITO. "/removeAppunti?keyToEdit=" . $appunti[$i]->getKeyCorsi();?>"><i class="fa fa-edit" style="font-size: 150%"></i></a></th>
+                                            <th><a href="<?php echo DOMINIO_SITO. "/removeAppunti?keyToDelete=" . $appunti[$i]->getKeyCorsi();?>"><i class="fa fa-times" style="font-size: 150%; color: red"></i></a></th>
+                                        </tr>
 
-                    </div>
-                
-            </div>  
+                                        <?php
+                                    }
+                                    ?>
 
-            </div>
+                                </table>
+                            </div>
+
+
+
+
+                </div>
 
         </div>
         
