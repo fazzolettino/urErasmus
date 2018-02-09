@@ -68,7 +68,7 @@
                         <br>
                         <div class="row">
                             <div class="text-center">
-                                <a href="<?php echo DOMINIO_SITO;?>/inserisciAnnuncio">
+                                <a href="<?php echo DOMINIO_SITO;?>/inserisciAnnunci">
                                     <button class="btn btn-success btn-lg">
                                         Aggiungi nuovo Annuncio
                                     </button>

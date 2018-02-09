@@ -118,5 +118,13 @@ class AppuntiManager
         //echo $query;
     }
 
+    public function modificaAppunti($keyCorsi){
+        $selectSql = "UPDATE * FROM APPUNTI WHERE KEYCORSI = '%S'";
+        $query = sprintf($selectSql,$keyCorsi);
+        $res = mysqli_query(Connector::getConnector(),$query);
+        
+        
+    }
+
 
 }
