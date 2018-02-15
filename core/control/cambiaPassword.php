@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Paolo
- * Date: 28/01/2017
- * Time: 13:43
- */
+
 include_once MODEL_DIR . "UtenteManager.php";
 include_once BEANS_DIR . "Utente.php";
 

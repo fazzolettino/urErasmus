@@ -6,7 +6,7 @@
 
 <head>
 
-    <title>URErasmus | Modifica Profilo</title>
+    <title>URErasmus | Edit Profile</title>
     <?php include VIEW_DIR ."headerStart.php"?>
 </head>
 
@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                <h2>Modifica Profilo</h2>
+                <h2>Edit Profile</h2>
                 <hr class="star-primary">
             </div>
         </div>
@@ -45,22 +45,8 @@
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Città</label>
-                            <input type="tel" class="form-control" placeholder="Città" name="citta">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Password</label>
-                            <input type="password" pattern=".{6,}" class="form-control" placeholder="Password" name="pssw">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Conferma Password</label>
-                            <input type="password" pattern=".{6,}" class="form-control" placeholder="Conferma Password" name="confermpssw">
+                            <label>City</label>
+                            <input type="tel" class="form-control" placeholder="City" name="citta">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -68,7 +54,7 @@
                     <div id="success"></div>
                     <div class="row">
                         <div class="form-group col-xs-12 text-center">
-                            <button type="submit" class="btn btn-success btn-lg">Invia</button>
+                            <button type="submit" class="btn btn-success btn-lg">Confirm</button>
                         </div>
                     </div>
                 </form>
@@ -77,7 +63,7 @@
         <hr>
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                <h2>Cambia Password</h2>
+                <h2>Change Password</h2>
                 <hr class="star-primary">
             </div>
         </div>
@@ -86,22 +72,22 @@
                 <form action="<?php echo DOMINIO_SITO;?>/cambiaPassword" method="post">
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Vecchia Password</label>
-                            <input type="password" pattern=".{6,}" class="form-control" required title="Minimo 6 caratteri" placeholder="Vecchia Password" name="oldpssw">
+                            <label>Old Password</label>
+                            <input type="password" pattern=".{6,}" class="form-control" required title="Minimo 6 caratteri" placeholder="Old Password" name="oldpssw">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Nuova Password</label>
-                            <input type="password" pattern=".{6,}" class="form-control" required title="Minimo 6 caratteri" placeholder="Nuova Password" name="newpssw">
+                            <label>New Password</label>
+                            <input type="password" pattern=".{6,}" class="form-control" required title="Minimo 6 caratteri" placeholder="New Password" name="newpssw">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Conferma Password</label>
-                            <input type="password" pattern=".{6,}" class="form-control" required title="Minimo 6 caratteri" placeholder="Conferma Password" name="confermnewpssw">
+                            <label>Confirm Password</label>
+                            <input type="password" pattern=".{6,}" class="form-control" required title="Minimo 6 caratteri" placeholder="Confirm Password" name="confermnewpssw">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -109,7 +95,7 @@
                     <div id="success"></div>
                     <div class="row">
                         <div class="form-group col-xs-12 text-center">
-                            <button type="submit" class="btn btn-success btn-lg">Invia</button>
+                            <button type="submit" class="btn btn-success btn-lg">Confirm</button>
                         </div>
                     </div>
                 </form>

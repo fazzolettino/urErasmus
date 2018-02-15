@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>URErasmus | Lista Appunti</title>
+    <title>URErasmus | Events List</title>
     <?php include_once VIEW_DIR . "headerStart.php"?>
 
 </head>
@@ -20,7 +20,7 @@
     <div class="container" style="margin-top: 10%;">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                <h2>Lista appunti </h2>
+                <h2>Event list </h2>
                 <hr class="star-primary">
             </div>
         </div>
@@ -69,7 +69,7 @@
                 }
             }else{?>
                 <div>
-                    <p><b>Non ci sono appunti.</b></p>
+                    <p><b>No datas.</b></p>
                 </div>
 
         <?php

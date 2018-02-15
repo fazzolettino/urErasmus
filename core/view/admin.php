@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                <h2>Profilo</h2>
+                <h2>Profile</h2>
                 <hr class="star-primary">
                 <br>
             </div>
@@ -46,7 +46,7 @@
                             <div class="text-center">
                                 <a href="<?php echo DOMINIO_SITO;?>/inserisciAnnunci">
                                     <button class="btn btn-success btn-lg">
-                                        Add new class
+                                        Add class
                                     </button>
                                 </a>
                             </div>
@@ -66,11 +66,22 @@
                             <div class="text-center">
                                 <a href="<?php echo DOMINIO_SITO;?>/AdminEvents">
                                     <button  class="btn btn-success btn-lg">
-                                        Modify the events
+                                        Edit events
                                     </button>
                                 </a>
                             </div>
                         </div>
+                        <br>
+                        <div class='row'>
+                            <div class='text-center'>
+                                <a href="<?php echo DOMINIO_SITO;?>/AdminClasses">
+                                    <button class="btn btn-success btn-lg">
+                                        Edit classes
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                        <br>
                     </div>
                 </div>
             </div>

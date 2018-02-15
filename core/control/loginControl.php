@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Hacca
- * Date: 20/01/2017
- * Time: 19:06
- */
-
 include_once MODEL_DIR."UtenteManager.php";
 
 $manager = new UtenteManager();
@@ -19,15 +12,13 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
         $user = $manager->getUtenteById($username);
         if (strcmp($user->getId(),"admin")==0){
         $_SESSION['user'] = serialize($user);
-
         $_SESSION['toast-type'] = "success";
-        $_SESSION['toast-message'] = "Bentornato ".$user->getId()." !";
-        header ("location: ".DOMINIO_SITO."/admin");
+        $_SESSION['toast-message'] = "Welcome back"." ".$user->getId()." !";
+        header ("location: ".DOMINIO_SITO."/home");
         }else{
         $_SESSION['user'] = serialize($user);
-
         $_SESSION['toast-type'] = "success";
-        $_SESSION['toast-message'] = "Bentornato ".$user->getId()." !";
+        $_SESSION['toast-message'] = "Welcome back ". " " . $user->getId()." !";
         header ("location: ".DOMINIO_SITO."/home");
         }
 

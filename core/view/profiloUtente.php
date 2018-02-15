@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                <h2>Profilo</h2>
+                <h2>Profile</h2>
                 <hr class="star-primary">
                 <br>
             </div>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group">
-                        <h4>Città</h4>
+                        <h4>City</h4>
                         <p><?php echo $user->getCitta();?></p>
                         <p class="help-block text-danger"></p>
                     </div>
@@ -44,14 +44,14 @@
                     <div class="form-group col-xs-12 floating-label-form-group">
                         <a href="<?php echo DOMINIO_SITO;?>/modificaProfiloUtente">
                             <button class="btn btn-success btn-lg">
-                                Modifica Profilo
+                                Edit profile
                             </button>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
+        <!--<div class="row">
             <div class="text-center">
                 <div class="row">
                     <br>
@@ -60,24 +60,14 @@
                             <div class="text-center">
                                 <a href="<?php echo DOMINIO_SITO;?>/myAnnunci">
                                     <button id="my-annunci" class="btn btn-success btn-lg">
-                                        I Miei Annunci
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="text-center">
-                                <a href="<?php echo DOMINIO_SITO;?>/inserisciAnnunci">
-                                    <button class="btn btn-success btn-lg">
-                                        Aggiungi nuovo Annuncio
+                                        My classes
                                     </button>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>

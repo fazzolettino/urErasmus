@@ -3,6 +3,7 @@
 include_once BEANS_DIR.'Appunti.php';
 include_once MODEL_DIR.'Connector.php';
 include_once MODEL_DIR.'TagManager.php';
+include_once BEANS_DIR.'Tag.php';
 class AppuntiManager
 
 {

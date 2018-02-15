@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: Paolo
- * Date: 12/01/2017
- * Time: 09:51
- */
 include_once BEANS_DIR .'Annuncio.php';
 include_once MODEL_DIR . 'Connector.php';
 include_once MODEL_DIR . 'TagManager.php';
@@ -98,6 +92,21 @@ class AnnuncioManager
             }
         }
         return $listAnnunci;
+    }
+
+    public function cancellaAnnuncio($keyAnnuncio){
+        $selectSql = "DELETE FROM `annuncio` WHERE `KEYANNUNCIO` = '%s'";
+        $query = sprintf($selectSql,$keyAnnuncio);
+        $res = mysqli_query(Connector::getConnector(),$query);
+        //echo $query;
+    }
+
+    public function modificaAnnuncio($keyAnnuncio){
+        $selectSql = "UPDATE * FROM annuncio WHERE KEYANNUNCIO = '%S'";
+        $query = sprintf($selectSql,$keyAnnuncio);
+        $res = mysqli_query(Connector::getConnector(),$query);
+        
+        
     }
 
 

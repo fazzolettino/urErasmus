@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row">
                 <div class="footer-col col-md-6">
-                    <h3>TEAM URErasmus</h3>
+                    <h3>TEAM urErasmus</h3>
                     <p>
                         Rodrigo Calvo<br>
                         Manuel Vitolo<br>
@@ -45,7 +45,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    Team URErasmus 2017
+                    -  Team urErasmus 2018  -
                 </div>
             </div>
         </div>

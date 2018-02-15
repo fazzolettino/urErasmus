@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>URErasmus | Subjects</title>
+    <title>URErasmus | Events</title>
     <?php include_once VIEW_DIR . "headerStart.php"?>
      <?php  include_once MODEL_DIR . "AppuntiManager.php"?>
 
@@ -19,7 +19,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                <h2>All the subjects you need</h2>
+                <h2>All the events around you</h2>
                 <hr class="star-primary">
             </div>
         </div>
@@ -40,7 +40,7 @@
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
             <div class="text-center">
                     <div class="form-group col-xs-12 floating-label-form-group">
-                        <h4>Nome</h4>
+                        <h4>Name</h4>
                         <?php for($i=0; $i < count($appunti); $i++) { ?>
                             <p><?php echo $appunti[$i]->getNome();?></p>
                         <?php } ?>
@@ -53,7 +53,7 @@
 
 
                     <div class="form-group col-xs-12 floating-label-form-group">
-                        <h4>Categoria</h4>
+                        <h4>Category</h4>
                         <?php for($i=0; $i < count($appunti); $i++) {    ?>
                         <p><?php echo $appunti[$i]->getCategoria();?></p>
                         <?php } ?>

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>URErasmus | Autenticazione</title>
+    <title>URErasmus | Autentication</title>
     <?php include_once VIEW_DIR ."headerStart.php"?>
 
 </head>
@@ -42,7 +42,7 @@
                             <div id="success"></div>
                             <div class="row">
                                 <div class="form-group col-xs-12">
-                                    <button type="submit" class="btn btn-success btn-lg">Accedi</button>
+                                    <button type="submit" class="btn btn-success btn-lg">Login</button>
                                 </div>
                             </div>
                         </form>
@@ -53,7 +53,7 @@
         <div class="col-lg-6 col-md-6">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                    <h2>Registrazione</h2>
+                    <h2>Registration</h2>
                     <hr class="star-primary">
                     <br>
                 </div>
@@ -79,7 +79,7 @@
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
                                     <label>Città</label>
-                                    <input type="text" class="form-control" placeholder="Città" name="citta" id="citta" required title="Inserisci città" data-validation-required-message="Inserisci città" aria-invalid="false">
+                                    <input type="text" class="form-control" placeholder="City" name="citta" id="citta" required title="Inserisci città" data-validation-required-message="Inserisci città" aria-invalid="false">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
@@ -94,7 +94,7 @@
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
                                     <label>Conferma Password</label>
-                                    <input type="password" pattern=".{6,}" class="form-control" placeholder="Conferma Password" name="confermaPassword" id="password" required title="Minimo 6 caratteri" data-validation-required-message="Conferma password" aria-invalid="false">
+                                    <input type="password" pattern=".{6,}" class="form-control" placeholder="Confirm Password" name="confermaPassword" id="password" required title="Minimo 6 caratteri" data-validation-required-message="Conferma password" aria-invalid="false">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
@@ -102,8 +102,8 @@
                             <div id="success"></div>
                             <div class="row">
                                 <div class="form-group col-xs-12">
-                                    <button type="submit" class="btn btn-success btn-lg">Registrati</button>
-                                    <button type="reset" class="btn btn-danger btn-lg">Cancella</button>
+                                    <button type="submit" class="btn btn-success btn-lg">Register</button>
+                                    <button type="reset" class="btn btn-danger btn-lg">Cancel</button>
                                 </div>
                             </div>
                         </form>

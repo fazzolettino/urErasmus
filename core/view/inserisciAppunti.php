@@ -5,7 +5,7 @@
 <html lang="en">
 
 <head>
-    <title>URErasmus | Insert Event</title>
+    <title>URErasmus | Add Event</title>
     <?php include_once VIEW_DIR . "headerStart.php"?>
 
 </head>
@@ -20,7 +20,7 @@
     <div class="container" style="margin-top: 10%;">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2>Insert Event</h2>
+                <h2>Add Event</h2>
                 <hr class="star-primary">
             </div>
         </div>
@@ -38,8 +38,8 @@
                     
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Categorie</label>
-                            <input type="text" name="Categorie" placeholder="Categorie" disabled>
+                            <label>Categories</label>
+                            <input type="text" name="Categorie" placeholder="Categories" disabled>
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="row control-group">
@@ -55,14 +55,14 @@
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>annoCorso</label>
+                                <label>Year</label>
                                 <textarea rows="2" class="form-control" placeholder="Year of event" name="annoCorso" required data-validation-required-message="Inserisci una descrizione."></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>dataDiCaricamento</label>
+                            <label>Upload date</label>
                             <input type="text" class="form-control" placeholder="Date" name="dataDiCaricamento" required data-validation-required-message="Inserisci un nome.">
                             <p class="help-block text-danger"></p>
                         </div>

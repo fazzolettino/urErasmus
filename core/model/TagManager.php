@@ -2,12 +2,7 @@
 include_once BEANS_DIR . "Tag.php";
 include_once BEANS_DIR . "Annuncio.php";
 include_once BEANS_DIR . "Appunti.php";
-/**
- * Created by PhpStorm.
- * User: Paolo
- * Date: 12/01/2017
- * Time: 09:43
- */
+
 class TagManager
 {
     public function __construct()

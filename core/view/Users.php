@@ -54,7 +54,7 @@
             </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
                     <div class="form-group col-xs-12 floating-label-form-group">
-                        <h4>Città</h4>
+                        <h4>City</h4>
                         <?php for($i=0; $i < count($utenti); $i++) { 
                             if (strcmp($utenti[$i]->getId(), 'admin')!=0) { ?>
                         <p><?php echo $utenti[$i]->getCitta();?>&nbsp&nbsp

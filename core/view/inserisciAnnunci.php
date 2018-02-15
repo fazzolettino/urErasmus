@@ -7,7 +7,7 @@
 
 <head>
 
-    <title> URErasmus | Add new class</title>
+    <title> URErasmus | Add class</title>
     <?php include_once VIEW_DIR . "headerStart.php"?>
 
 </head>
@@ -22,7 +22,7 @@
     <div class="container" style="margin-top: 10%;">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2>Add new class</h2>
+                <h2>Add class</h2>
                 <hr class="star-primary">
             </div>
         </div>
@@ -55,8 +55,8 @@
                     <div id="success"></div>
                     <div class="row">
                         <div class="form-group col-xs-12" style="float: right;">
-                            <button type="reset" class="btn btn-danger btn-lg" style="float: right; margin-left: 1%;">Cancella</button>
-                            <button type="submit" class="btn btn-success btn-lg" style="float: right;">Inserisci</button>
+                            <button type="reset" class="btn btn-danger btn-lg" style="float: right; margin-left: 1%;">Cancel</button>
+                            <button type="submit" class="btn btn-success btn-lg" style="float: right;">Insert</button>
                         </div>
                     </div>
                 </form>

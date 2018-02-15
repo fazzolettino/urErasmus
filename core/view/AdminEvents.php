@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>URErasmus | Subjects</title>
+    <title>URErasmus | Events</title>
     <?php include_once VIEW_DIR . "headerStart.php"?>
      <?php  include_once MODEL_DIR . "AppuntiManager.php"?>
 
@@ -34,7 +34,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                <h2>All the subjects you need</h2>
+                <h2>All the events around you</h2>
                 <hr class="star-primary">
             </div>
         </div>
@@ -56,8 +56,8 @@
                             <div class="col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-border-1 col-xs-10">
                                 <table>
                                     <tr>
-                                        <th class="tbl">Nome</th>
-                                        <th class="tbl">Categoria</th>
+                                        <th class="tbl">Name</th>
+                                        <th class="tbl">Category</th>
                                         <th class="tbl">Year</th>
                                     </tr>
 

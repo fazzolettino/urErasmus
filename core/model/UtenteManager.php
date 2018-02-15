@@ -2,12 +2,7 @@
 
 include_once BEANS_DIR . 'Utente.php';
 include_once MODEL_DIR .'Connector.php';
-/**
- * Created by PhpStorm.
- * User: Paolo
- * Date: 12/01/2017
- * Time: 09:43
- */
+
 class UtenteManager
 {
 
