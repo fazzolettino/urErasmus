@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Paolo
- * Date: 11/01/2017
- * Time: 14:56
- */
+
 define('ROOT_DIR', dirname(__FILE__));
 define('DOMINIO_SITO', '/urErasmus');
 define('CORE_DIR', ROOT_DIR . '/core/');
@@ -88,6 +83,9 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
                 break;
             case 'admin': 
                 include_once VIEW_DIR ."admin.php";
+                break;
+            case 'AdminClasses':
+                include_once CONTROL_DIR . "getAnnunciAdmin.php";
                 break;
             case 'myAnnunci':
                 include_once CONTROL_DIR ."myAnnunciControl.php";
