@@ -6,9 +6,12 @@ include_once MODEL_DIR ."UtenteManager.php";
 
 
 
-$manager = new AppuntiManager();
 if (isset($_GET['keyToEdit'])){
-    $deleteKey = $_GET['keyToEdit'];
+    $editKey = $_GET['keyToEdit'];
+    $AppuntiManager = new AppuntiManager();
+    $appunto = $AppuntiManager->getAppuntiByKeyAppunti($editKey);
+
+    include_once VIEW_DIR ."editAppuntiView.php";
 
 
 } else {

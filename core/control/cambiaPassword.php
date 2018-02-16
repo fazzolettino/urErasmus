@@ -33,13 +33,13 @@ if(isset($_SESSION['user'])) {
 
                 } else {
                     $_SESSION['toast-type'] = "error";
-                    $_SESSION['toast-message'] = "Errore nell'inserimento della password";
+                    $_SESSION['toast-message'] = "Password vecchia errata";
                     header("Location:" . DOMINIO_SITO . "/modificaProfiloUtente");
                 }
 
             } else {
                 $_SESSION['toast-type'] = "error";
-                $_SESSION['toast-message'] = "Errore nell'inserimento della password";
+                $_SESSION['toast-message'] = "Password inserite diverse";
                 header("Location:" . DOMINIO_SITO . "/modificaProfiloUtente");
 
             }

@@ -71,7 +71,7 @@
                                             <th><?php echo $appunti[$i]->getNome()?></th>
                                             <th><?php echo $appunti[$i]->getCategoria()?></th>
                                             <th><?php echo $appunti[$i]->getAnnoCorso()?></th>
-                                            <th><a href="<?php echo DOMINIO_SITO. "/removeAppunti?keyToEdit=" . $appunti[$i]->getKeyCorsi();?>"><i class="fa fa-edit" style="font-size: 150%"></i></a></th>
+                                            <th><a href="<?php echo DOMINIO_SITO. "/editAppunti?keyToEdit=" . $appunti[$i]->getKeyCorsi();?>"><i class="fa fa-edit" style="font-size: 150%"></i></a></th>
                                             <th><a href="<?php echo DOMINIO_SITO. "/removeAppunti?keyToDelete=" . $appunti[$i]->getKeyCorsi();?>"><i class="fa fa-times" style="font-size: 150%; color: red"></i></a></th>
                                         </tr>
 

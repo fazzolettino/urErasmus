@@ -94,21 +94,18 @@ class AppuntiManager
         return $listAppunti;
     }
 
-    public function  getAppuntiByKeyAppunti($keyAppunti){
-        $selectSql = "SELECT * FROM APPUNTI WHERE KEYAPPUNTI = '%s'";
+    public function getAppuntiByKeyAppunti($keyAppunti){
+        $selectSql = "SELECT * FROM APPUNTI WHERE KEYCORSI = '%s'";
         $query = sprintf($selectSql,$keyAppunti);
         $res = mysqli_query(Connector::getConnector(),$query);
 
         if($res){
-
-            while($obj =$res->fetch_assoc()){
-                $listTag = $this->tagManager->getTagByAppunti($obj['KEYAPPUNTI']);
-                $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
+ 
+            if($obj =$res->fetch_assoc()){
+                $appunti = new Appunti($obj['KEYCORSI'],$obj['NOME'],$obj['CATEGORIA'],$obj['ANNOCORSO'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE']);
                 return $appunti;
             }
         }
-
-        return $listAppunti;
 
     }
 
@@ -119,10 +116,16 @@ class AppuntiManager
         //echo $query;
     }
 
-    public function modificaAppunti($keyCorsi){
-        $selectSql = "UPDATE * FROM APPUNTI WHERE KEYCORSI = '%S'";
-        $query = sprintf($selectSql,$keyCorsi);
+    public function modificaAppunti($keyCorsi, $nome, $categoria, $corso, $data){
+        $selectSql = "UPDATE `appunti` SET `NOME`= '%s',`CATEGORIA`= '%s',`ANNOCORSO`= '%s',`DATADICARICAMENTO`= '%s' WHERE KEYCORSI = '%s'";
+        $query = sprintf($selectSql,$nome, $categoria, $corso, $data, $keyCorsi);
         $res = mysqli_query(Connector::getConnector(),$query);
+        echo $query;
+        if($res) {
+            return true;
+        } else {
+            return false;
+        }
         
         
     }
