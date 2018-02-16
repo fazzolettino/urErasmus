@@ -36,7 +36,7 @@
         </div>
        
 
-                <div class="container">
+        <div class="container">
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
             <div class="text-center">
                     <div class="form-group col-xs-12 floating-label-form-group">
@@ -49,7 +49,7 @@
             </div>
         </div>
 
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
 
 
                     <div class="form-group col-xs-12 floating-label-form-group">
@@ -61,17 +61,18 @@
                     </div>
                 
             </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
+
+
                     <div class="form-group col-xs-12 floating-label-form-group">
-                        <h4>Year</h4>
-                        <?php for($i=0; $i < count($appunti); $i++) {  ?>
-                        <p><?php echo $appunti[$i]->getAnnoCorso();?>&nbsp&nbsp
+                        <h4>Date</h4>
+                        <?php for($i=0; $i < count($appunti); $i++) {    ?>
+                        <p><?php echo $appunti[$i]->getDataDiCaricamento();?></p>
                         <?php } ?>
                         <p class="help-block text-danger"></p>
-
                     </div>
                 
-            </div>  
+            </div>
             </div>
         </div>
 
