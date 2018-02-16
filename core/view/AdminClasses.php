@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php  ?>
+
 <head>
     <title>URErasmus | Subjects</title>
     <?php include_once VIEW_DIR . "headerStart.php"?>
@@ -71,8 +73,8 @@
                                             <th><?php echo $annunci[$i]->getTitolo()?></th>
                                             <th><?php echo $annunci[$i]->getDescrizione()?></th>
                                             <th><?php echo $annunci[$i]->getContatto()?></th>
-                                            <th><a href="<?php echo DOMINIO_SITO. "/removeAnnunci?keyToEdit=" . $annunci[$i]->getKeyUtente();?>"><i class="fa fa-edit" style="font-size: 150%"></i></a></th>
-                                            <th><a href="<?php echo DOMINIO_SITO. "/removeAnnunci?keyToDelete=" . $annunci[$i]->getKeyUtente();?>"><i class="fa fa-times" style="font-size: 150%; color: red"></i></a></th>
+                                            <th><a href="<?php echo DOMINIO_SITO. "/removeAnnuncio?keyToEdit=" . $annunci[$i]->getKeyAnnuncio();?>"><i class="fa fa-edit" style="font-size: 150%"></i></a></th>
+                                            <th><a href="<?php echo DOMINIO_SITO. "/removeAnnuncio?keyToDelete=" . $annunci[$i]->getKeyAnnuncio();?>"><i class="fa fa-times" style="font-size: 150%; color: red"></i></a></th>
                                         </tr>
 
                                         <?php

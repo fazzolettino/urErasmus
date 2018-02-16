@@ -108,7 +108,7 @@ class AppuntiManager
             }
         }
 
-        return null;
+        return $listAppunti;
 
     }
 

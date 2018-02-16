@@ -102,7 +102,7 @@ class AnnuncioManager
     }
 
     public function modificaAnnuncio($keyAnnuncio){
-        $selectSql = "UPDATE * FROM annuncio WHERE KEYANNUNCIO = '%S'";
+        $selectSql = "UPDATE * FROM `annuncio` WHERE 'KEYANNUNCIO' = '%S'";
         $query = sprintf($selectSql,$keyAnnuncio);
         $res = mysqli_query(Connector::getConnector(),$query);
         

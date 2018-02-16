@@ -8,6 +8,7 @@ include_once MODEL_DIR ."UtenteManager.php";
 
 $manager = new AnnuncioManager();
 if (isset($_GET['keyToDelete'])){
+	echo 'keyToDelete';
     $deleteKey = $_GET['keyToDelete'];
 
     

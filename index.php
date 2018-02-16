@@ -105,6 +105,9 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
             case 'removeAppunti':
                 include_once CONTROL_DIR . "removeAppunti.php";
                 break;
+            case 'removeAnnuncio':
+                include_once CONTROL_DIR . "removeAnnuncio.php";
+                break;
             case 'help':
                 include_once VIEW_DIR . "help.php";
                 break;

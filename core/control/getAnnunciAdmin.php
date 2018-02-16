@@ -8,7 +8,7 @@ include_once MODEL_DIR ."UtenteManager.php";
 
     $manager = new AnnuncioManager();
 
-    $appunti = $manager->getAllAnnunci();
+    $annunci = $manager->getAllAnnunci();
 
 
     include_once VIEW_DIR . "AdminClasses.php";
