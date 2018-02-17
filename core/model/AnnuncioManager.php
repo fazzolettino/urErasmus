@@ -31,7 +31,6 @@ class AnnuncioManager
         $query = sprintf($insertSql, $annuncio->getTitolo(), $annuncio->getDescrizione(), $annuncio->getContatto(), $annuncio->getDataDiCaricamento(), $annuncio->getKeyUtente());
         mysqli_query(Connector::getConnector(), $query);
         $keyAnnuncio = $this->lastInsertKey();
-        $this->tagManager->insertTagsByAnnuncio($keyAnnuncio, $annuncio->getTags());
     }
 
     public function getAllAnnunci(){

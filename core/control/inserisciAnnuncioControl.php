@@ -9,24 +9,16 @@ if(isset($_SESSION['user'])) {
     } else {
         $_SESSION['toast-type'] = "error";
         $_SESSION['toast-message'] = "Inserisci il titolo";
-        header("Location:" . DOMINIO_SITO . "/inserisciAnnuncio");
+        header("Location:" . DOMINIO_SITO . "/inserisciAnnunci");
     }
 
-    if (isset($_POST['tags'])) {
-        $tags = $_POST['tags'];
-        $result = explode(" ", $tags);
-    } else {
-        $_SESSION['toast-type'] = "error";
-        $_SESSION['toast-message'] = "Inserisci almeno un tag";
-        header("Location:" . DOMINIO_SITO . "/inserisciAnnuncio");
-    }
 
     if (isset($_POST['descrizione'])) {
         $descrizione = $_POST['descrizione'];
     } else {
         $_SESSION['toast-type'] = "error";
         $_SESSION['toast-message'] = "Inserisci la descrizione";
-        header("Location:" . DOMINIO_SITO . "/inserisciAnnuncio");
+        header("Location:" . DOMINIO_SITO . "/inserisciAnnunci");
     }
 
     if (isset($_POST['contatto'])) {
@@ -34,7 +26,7 @@ if(isset($_SESSION['user'])) {
     } else {
         $_SESSION['toast-type'] = "error";
         $_SESSION['toast-message'] = "Inserisci un contatto";
-        header("Location:" . DOMINIO_SITO . "/inserisciAnnuncio");
+        header("Location:" . DOMINIO_SITO . "/inserisciAnnunci");
     }
 
     $user = unserialize($_SESSION['user']);
