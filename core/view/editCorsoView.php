@@ -28,7 +28,7 @@
         </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <form action="<?php echo DOMINIO_SITO;?>/realEditAnnuncio?keyToEdit=<?php echo $annuncio->getKeyAnnuncio()?>" method="post">
+                <form action="<?php echo DOMINIO_SITO;?>/realEditCorso?keyToEdit=<?php echo $annuncio->getKeyAnnuncio()?>" method="post">
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>University</label>

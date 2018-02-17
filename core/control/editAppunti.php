@@ -11,7 +11,7 @@ if (isset($_GET['keyToEdit'])){
     $AppuntiManager = new AppuntiManager();
     $appunto = $AppuntiManager->getAppuntiByKeyAppunti($editKey);
 
-    include_once VIEW_DIR ."editAppuntiView.php";
+    include_once VIEW_DIR ."editEventiView.php";
 
 
 } else {

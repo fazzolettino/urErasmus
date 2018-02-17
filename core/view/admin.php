@@ -34,7 +34,7 @@
                     <div class="text-center">
                         <div class="row">
                             <div class="text-center">
-                                <a href="<?php echo DOMINIO_SITO;?>/inserisciAppunti">
+                                <a href="<?php echo DOMINIO_SITO;?>/inserisciEvento">
                                     <button id="my-annunci" class="btn btn-success btn-lg">
                                         Add event
                                     </button>
@@ -44,7 +44,7 @@
                         <br>
                         <div class="row">
                             <div class="text-center">
-                                <a href="<?php echo DOMINIO_SITO;?>/inserisciAnnunci">
+                                <a href="<?php echo DOMINIO_SITO;?>/inserisciCorso">
                                     <button class="btn btn-success btn-lg">
                                         Add class
                                     </button>

@@ -31,11 +31,11 @@ if(isset($_POST['contatto']) && $_POST['contatto']) {
     if ($flag == 1){
         $_SESSION['toast-type'] = "success";
         $_SESSION['toast-message'] = "Modifiche applicate con successo";
-        header("Location:" . DOMINIO_SITO . "/getAnnunci");
+        header("Location:" . DOMINIO_SITO . "/urUniversity");
     } else {
         $_SESSION['toast-type'] = "error";
         $_SESSION['toast-message'] = "Errore durante la modifica";
-        header("Location:" . DOMINIO_SITO . "/editAnnuncio?keyToEdit=" . $_GET['keyToEdit']);
+        header("Location:" . DOMINIO_SITO . "/editCorso?keyToEdit=" . $_GET['keyToEdit']);
     }
 
 

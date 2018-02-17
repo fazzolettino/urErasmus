@@ -8,8 +8,8 @@ if(isset($_SESSION['user'])) {
         $titolo = $_POST['titolo'];
     } else {
         $_SESSION['toast-type'] = "error";
-        $_SESSION['toast-message'] = "Inserisci il titolo";
-        header("Location:" . DOMINIO_SITO . "/inserisciAnnunci");
+        $_SESSION['toast-message'] = "Insert title";
+        header("Location:" . DOMINIO_SITO . "/inserisciCorso");
     }
 
 
@@ -17,16 +17,16 @@ if(isset($_SESSION['user'])) {
         $descrizione = $_POST['descrizione'];
     } else {
         $_SESSION['toast-type'] = "error";
-        $_SESSION['toast-message'] = "Inserisci la descrizione";
-        header("Location:" . DOMINIO_SITO . "/inserisciAnnunci");
+        $_SESSION['toast-message'] = "Insert description";
+        header("Location:" . DOMINIO_SITO . "/inserisciCorso");
     }
 
     if (isset($_POST['contatto'])) {
         $contatto = $_POST['contatto'];
     } else {
         $_SESSION['toast-type'] = "error";
-        $_SESSION['toast-message'] = "Inserisci un contatto";
-        header("Location:" . DOMINIO_SITO . "/inserisciAnnunci");
+        $_SESSION['toast-message'] = "Insert contact";
+        header("Location:" . DOMINIO_SITO . "/inserisciCorso");
     }
 
     $user = unserialize($_SESSION['user']);
@@ -39,9 +39,9 @@ if(isset($_SESSION['user'])) {
     $manager->insertAnnuncio($annuncio);
 
     $_SESSION['toast-type'] = "success";
-    $_SESSION['toast-message'] = "Annuncio inserito con successo!";
+    $_SESSION['toast-message'] = "Class inserted correctly!";
 
-    header("Location:" . DOMINIO_SITO . "/getAnnunci");
+    header("Location:" . DOMINIO_SITO . "/urUniversity");
 
 }else{
     header("Location:".DOMINIO_SITO);

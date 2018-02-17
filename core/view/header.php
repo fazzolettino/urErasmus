@@ -60,8 +60,8 @@
                      id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                             
-                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/getAnnunci";?>" ><span style="color:#848484">UR</span>University</a></li>
-                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/getAppunti";?>"><span style="color:#848484">UR</span>Events</a></li>                        
+                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/urUniversity";?>" ><span style="color:#848484">UR</span>University</a></li>
+                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/urEvents";?>"><span style="color:#848484">UR</span>Events</a></li>
                             <?php if (isset($_SESSION['user'])){
                                 $utente = new Utente(null, null, null, null, null);
                                 $utente = unserialize($_SESSION['user']);

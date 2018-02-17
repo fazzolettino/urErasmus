@@ -45,10 +45,10 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
             case 'profiloUtente':
                 include_once CONTROL_DIR ."getProfiloUtente.php";
                 break;
-            case 'getAppunti':
+            case 'urEvents':
                 include_once CONTROL_DIR ."getAppunti.php";
                 break;
-            case 'getAnnunci':
+            case 'urUniversity':
                 include_once CONTROL_DIR ."getAnnunci.php";
                 break;
             case 'modificaUtente':
@@ -93,19 +93,19 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
             case 'AdminEvents':
                 include_once CONTROL_DIR . "getAppuntiAdmin.php";
                 break;
-            case 'removeAppunti':
+            case 'removeEventi':
                 include_once CONTROL_DIR . "removeAppunti.php";
                 break;
-            case 'removeAnnuncio':
+            case 'removeCorso':
                 include_once CONTROL_DIR . "removeAnnuncio.php";
                 break;
             case 'help':
                 include_once VIEW_DIR . "help.php";
                 break;
-            case 'inserisciAnnunci':
+            case 'inserisciCorso':
                 include_once VIEW_DIR . "inserisciAnnunci.php";
                 break; 
-            case 'inserisciAppunti':
+            case 'inserisciEvento':
                 include_once VIEW_DIR . "inserisciAppunti.php";
                 break;
             case 'autenticazione':
@@ -117,19 +117,19 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
             case 'listauser':
                 include_once CONTROL_DIR . "UtentiControl.php";
                 break;
-            case 'editAppunti':
+            case 'editEventi':
                 include_once CONTROL_DIR . "editAppunti.php";
                 break;
-            case 'realEditAppunti':
+            case 'realEditEventi':
                 include_once CONTROL_DIR . "realEditAppunti.php";
                 break;
-            case 'realEditAnnuncio':
+            case 'realEditCorso':
                 include_once CONTROL_DIR . "realEditAnnuncio.php";
                 break;
             case 'editProfilo':
                 include_once CONTROL_DIR . "editProfiloUtenteControl.php";
                 break;
-            case 'editAnnuncio':
+            case 'editCorso':
                 include_once CONTROL_DIR . "editAnnuncio.php";
                 break;
             default:
