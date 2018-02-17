@@ -23,8 +23,12 @@ CREATE TABLE annuncio (
 
 INSERT INTO `annuncio` (`KEYANNUNCIO`, `TITOLO`, `DESCRIZIONE`, `CONTATTO`, `DATADICARICAMENTO`, `KEYUTENTE`) VALUES
 (1, 'UniSa', 'Programmazione 1', 'professore@unisa.it', '2017-01-31', 1),
-(2, 'UGR', 'Programacion avanzada', 'profesor@ugr.es', '2017-01-31', 3),
-(3, 'University of Oxford', 'Computer science', 'professor@oxford.uk', '2017-01-31', 7);
+(2, 'UGR', 'Programacion avanzada', 'profesor@ugr.es', '2017-01-31', 1),
+(3, 'University of Oxford', 'Computer science', 'professor@oxford.uk', '2017-01-31', 3),
+(4, 'Universite de Lyon', 'Droit Prive', 'professeurblanc@udl.fr', '2017-01-31', 5),
+(5, 'Universitat Dortmund', 'Tecnische Zeichnung', 'profKlinsmann@tud.de', '2017-01-31', 9);
+
+
 
 -- --------------------------------------------------------
 
@@ -75,11 +79,11 @@ INSERT INTO `utente` (`KEYUTENTE`, `ID`, `EMAIL`, `CITTA`, `PASS`) VALUES
 (2, 'Javier Pastore', 'jpastore@hotmail.com', 'Lisbona', 'jpastore'),
 (3, 'Frank Lampard', 'flampard@gmail.com', 'Londra', 'flampard'),
 (4, 'Miroslav Klose', 'mklose@live.de', 'Norimberga', 'miroklose'),
-(5, 'Severino Ammirat', 's.ammirati@gmail.com', 'Striano', 'ammirati'),
-(6, 'Giovanni Salvati', 'giosalvati@gmail.com', 'Napoli', 'salvati'),
-(7, 'Giuseppe Bellino', 'gbellino@gmail.com', 'Terzigno', 'bellini'),
-(8, 'Mirko_PROLOLGAMER', 'm.aliberti@gmail.com', 'Siano', 'aliberti'),
-(9, 'Alex91msn', 'Alex@email.it', 'Pesciola', 'pasword');
+(5, 'Karim Benzema', 'kbenzema@gmail.com', 'Lione', 'kbenzema'),
+(6, 'Arijen Robben', 'arobben@gmail.com', 'Amsterdam', 'arobben'),
+(7, 'Kevin Miralls', 'kmirallas@gmail.com', 'Bruxelles', 'kmirallas'),
+(8, 'Kakhaber Kaladze', 'kkaladze@gmail.com', 'Tbilisi', 'kkaladze'),
+(9, 'Marco Reus', 'mreus@hotmail.com', 'Dortmund', 'mreus89');
 
 
  ENGINE=InnoDB DEFAULT CHARSET=latin1;
