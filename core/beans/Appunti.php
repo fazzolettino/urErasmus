@@ -12,15 +12,12 @@ class Appunti
 
     /**
      * Appunti constructor.
-     * @param $keyFile
+     * @param $keyCorsi
      * @param $nome
      * @param $categoria
      * @param $descrizione
-     * @param $raiting
-     * @param $path
      * @param $dataDiCaricamento
      * @param $keyUtente
-     * @param $listTags
      */
     public function __construct($keyCorsi, $nome, $categoria, $annocorso, $dataDiCaricamento, $keyUtente)
     {

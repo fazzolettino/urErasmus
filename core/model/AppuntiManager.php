@@ -2,8 +2,6 @@
 
 include_once BEANS_DIR.'Appunti.php';
 include_once MODEL_DIR.'Connector.php';
-include_once MODEL_DIR.'TagManager.php';
-include_once BEANS_DIR.'Tag.php';
 class AppuntiManager
 
 {
@@ -12,7 +10,6 @@ class AppuntiManager
     private $tagManager;
 
     public function __construct() {
-        $this->tagManager = new TagManager();
     }
 
     private function lastInsertKey(){
@@ -31,7 +28,6 @@ class AppuntiManager
                 VALUES ('%s', '%s', '%s', '%s','%s', '%s')" ;
         $query = sprintf($insertSql, null, $appunti->getNome(), $appunti->getCategoria(), $appunti->getAnnoCorso(), $appunti->getDataDiCaricamento(), $appunti->getKeyUtente());
         mysqli_query(Connector::getConnector(), $query);
-        $keyAppunti = $this->lastInsertKey();
     }
 
 
@@ -78,21 +74,6 @@ class AppuntiManager
         return $listAppunti;
     }
 
-    public function getAppuntiByTitolo ($name){
-        $selectSql = "SELECT * FROM APPUNTI WHERE NOME LIKE '%s'";
-        $name = "%%".$name."%%";
-        $query = sprintf($selectSql,$name);
-        $res = mysqli_query(Connector::getConnector(), $query);
-        $listAppunti = array();
-        if ($res) {
-            while ($obj = $res->fetch_assoc()) {
-                $listTag = $this->tagManager->getTagByAppunti($obj['KEYAPPUNTI']);
-                $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
-                array_push($listAppunti,$appunti);
-            }
-        }
-        return $listAppunti;
-    }
 
     public function getAppuntiByKeyAppunti($keyAppunti){
         $selectSql = "SELECT * FROM APPUNTI WHERE KEYCORSI = '%s'";

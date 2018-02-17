@@ -18,7 +18,6 @@ class Annuncio
      * @param $contatto
      * @param $dataDiCaricamento
      * @param $keyUtente
-     * @param $tags
      */
     public function __construct($keyAnnuncio, $titolo, $descrizione, $contatto, $dataDiCaricamento, $keyUtente)
     {

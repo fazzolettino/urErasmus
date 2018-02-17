@@ -36,9 +36,6 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
     
     if (!defined("TESTING")) {
         switch (isset($_URL[0]) ? $_URL[0] : '') {
-            case 'search':
-                include_once CONTROL_DIR . "searchBarControl.php";
-                break;
             case 'insertAnnuncio':
                 include_once CONTROL_DIR . "inserisciAnnuncioControl.php";
                 break;
@@ -53,12 +50,6 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
                 break;
             case 'getAnnunci':
                 include_once CONTROL_DIR ."getAnnunci.php";
-                break;
-            case 'scaricaAppunti':
-                include_once CONTROL_DIR . "scaricaAppunti.php";
-                break;
-            case 'visualizzaFile':
-                include_once CONTROL_DIR . "visualizzaFile.php";
                 break;
             case 'modificaUtente':
                 include_once CONTROL_DIR . "modificaProfiloUtenteControl.php";
