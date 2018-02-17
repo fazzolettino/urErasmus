@@ -42,7 +42,7 @@
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group">
-                        <a href="<?php echo DOMINIO_SITO;?>/modificaProfiloUtente">
+                        <a href="<?php echo DOMINIO_SITO;?>/editProfilo">
                             <button class="btn btn-success btn-lg">
                                 Edit profile
                             </button>

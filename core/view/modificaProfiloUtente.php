@@ -1,6 +1,7 @@
 <?php if(!(isset($_SESSION['user']))){
     header("Location:".DOMINIO_SITO);
-}?>
+} ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -32,21 +33,21 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Username</label>
-                            <input type="text" class="form-control" placeholder="User" name="username">
+                            <input type="text" class="form-control" placeholder="<?php echo $user->getId();?>" name="username">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Email</label>
-                            <input type="email" class="form-control" placeholder="Email" name="email">
+                            <input type="email" class="form-control" placeholder="<?php echo $user->getEmail();?>" name="email">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>City</label>
-                            <input type="tel" class="form-control" placeholder="City" name="citta">
+                            <input type="tel" class="form-control" placeholder="<?php echo $user->getCitta();?>" name="citta">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>

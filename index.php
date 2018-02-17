@@ -132,6 +132,9 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
             case 'realEditAppunti':
                 include_once CONTROL_DIR . "realEditAppunti.php";
                 break;
+            case 'editProfilo':
+                include_once CONTROL_DIR . "editProfiloUtenteControl.php";
+                break;
             default:
                 include_once VIEW_DIR ."404.php";
                 break;
