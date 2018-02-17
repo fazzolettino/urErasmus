@@ -61,11 +61,12 @@
                     </div>
                 
             </div>
+
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
                     <div class="form-group col-xs-12 floating-label-form-group">
-                        <h4>Year</h4>
+                        <h4>Date</h4>
                         <?php for($i=0; $i < count($appunti); $i++) {  ?>
-                        <p><?php echo $appunti[$i]->getAnnoCorso();?>&nbsp&nbsp
+                        <p><?php echo $appunti[$i]->getDataDiCaricamento();?>&nbsp&nbsp
                         <?php } ?>
                         <p class="help-block text-danger"></p>
 
