@@ -58,7 +58,7 @@
                                     <tr>
                                         <th class="tbl">Name</th>
                                         <th class="tbl">Category</th>
-                                        <th class="tbl">Year</th>
+                                        <th class="tbl">Date</th>
                                     </tr>
 
                                     <?php
@@ -70,7 +70,7 @@
                                         <tr>
                                             <th><?php echo $appunti[$i]->getNome()?></th>
                                             <th><?php echo $appunti[$i]->getCategoria()?></th>
-                                            <th><?php echo $appunti[$i]->getAnnoCorso()?></th>
+                                            <th><?php echo $appunti[$i]->getDataDiCaricamento()?></th>
                                             <th><a href="<?php echo DOMINIO_SITO. "/editAppunti?keyToEdit=" . $appunti[$i]->getKeyCorsi();?>"><i class="fa fa-edit" style="font-size: 150%"></i></a></th>
                                             <th><a href="<?php echo DOMINIO_SITO. "/removeAppunti?keyToDelete=" . $appunti[$i]->getKeyCorsi();?>"><i class="fa fa-times" style="font-size: 150%; color: red"></i></a></th>
                                         </tr>
