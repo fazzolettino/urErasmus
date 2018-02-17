@@ -56,18 +56,12 @@
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Year</label>
-                                <textarea rows="2" class="form-control" placeholder="Year of event" name="annoCorso" required data-validation-required-message="Inserisci una descrizione."></textarea>
+                                <input type="date" class="form-control" placeholder="Inserisci una data" name="annoCorso" required ">
                                 <p class="help-block text-danger"></p>
+
                             </div>
                         </div>
-                        <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Upload date</label>
-                            <input type="text" class="form-control" placeholder="Date" name="dataDiCaricamento" required data-validation-required-message="Inserisci un nome.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                        
+
 
 
                         <br>

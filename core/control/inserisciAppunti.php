@@ -88,7 +88,7 @@ if(isset($_SESSION['user'])) {
 
     $_SESSION['toast-type'] = "success";
     $_SESSION['toast-message'] = "File inserito con successo!";
-    header("Location:" . DOMINIO_SITO . "/inserisciAppunti");
+    header("Location:" . DOMINIO_SITO . "/getAppunti");
 }else{
     header("Location:" . DOMINIO_SITO);
 }

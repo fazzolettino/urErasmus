@@ -88,17 +88,11 @@
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Year</label>
-                                <textarea rows="2" class="form-control" placeholder="<?php echo $appunto->getAnnoCorso();?>" name="annoCorso"  data-validation-required-message="Inserisci una descrizione."></textarea>
+                                <input type="date" class="form-control" placeholder="<?php echo $appunto->getAnnoCorso();?>" name="annoCorso"  data-validation-required-message="Inserisci una descrizione.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
-                        <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Upload date</label>
-                            <input type="text" class="form-control" placeholder="<?php echo $appunto->getDataDiCaricamento();?>" name="dataDiCaricamento"  data-validation-required-message="Inserisci un nome.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
+
                         
 
 
