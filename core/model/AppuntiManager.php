@@ -120,7 +120,7 @@ class AppuntiManager
         $selectSql = "UPDATE `appunti` SET `NOME`= '%s',`CATEGORIA`= '%s',`ANNOCORSO`= '%s',`DATADICARICAMENTO`= '%s' WHERE KEYCORSI = '%s'";
         $query = sprintf($selectSql,$nome, $categoria, $corso, $data, $keyCorsi);
         $res = mysqli_query(Connector::getConnector(),$query);
-        echo $query;
+        //echo $query;
         if($res) {
             return true;
         } else {

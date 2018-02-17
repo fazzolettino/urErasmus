@@ -7,23 +7,58 @@ $manager = new AppuntiManager();
 $appunto = $manager->getAppuntiByKeyAppunti($_GET['keyToEdit']);
 
 
-if (isset($_POST['nome'])) {
-        
-        $nome = $_POST['nome'];
+    if (isset($_POST['nome']) && $_POST['nome'] != NULL) {
 
-        if (isset($_POST['Categorie'])) {
-        
-        $categoria = $_POST['Categorie'];
+    $nome = $_POST['nome'];
 
-		} else { //redirect $post_categoria
-
-        //categoria
+} else {
+        $nome = $appunto->getNome();
     }
 
-    } else { //redirect $post_nome
-        
-        //nome
+    if (isset($_POST['categorie']) && $_POST['categorie'] != NULL) {
+
+
+    $categoria = $_POST['categorie'];
+
+} else {
+        $categoria = $appunto->getCategoria();
+
     }
+
+    if (isset($_POST['annoCorso']) && $_POST['annoCorso'] != NULL) {
+
+    $annoCorso = $_POST['annoCorso'];
+
+
+} else {
+        $annoCorso = $appunto->getAnnoCorso();
+    }
+
+    if (isset($_POST['dataDiCaricamento'])  && $_POST['dataDiCaricamento'] != NULL) {
+
+    $dataDiCaricamento = $_POST['dataDiCaricamento'];
+
+} else {
+        $dataDiCaricamento = $appunto->getDataDiCaricamento();
+    }
+
+
+    $flag = $manager->modificaAppunti($_GET['keyToEdit'], $nome, $categoria, $annoCorso, $dataDiCaricamento);
+
+    if($flag == 1) {
+
+        $_SESSION['toast-type'] = "success";
+        $_SESSION['toast-message'] = "Modifiche applicate con successo";
+        header("Location:" . DOMINIO_SITO . "/editAppunti?keyToEdit=" . $_GET['keyToEdit']);
+
+    } else {
+
+        $_SESSION['toast-type'] = "error";
+        $_SESSION['toast-message'] = "Errore durante la modifica";
+        header("Location:" . DOMINIO_SITO . "/editAppunti?keyToEdit=" . $_GET['keyToEdit']);
+    }
+
+
 
 
 

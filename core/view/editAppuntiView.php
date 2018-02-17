@@ -1,6 +1,11 @@
 <?php if(!(isset($_SESSION['user']))){
     header("Location:".DOMINIO_SITO);
 }?>
+
+<?php
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,11 +31,11 @@
         </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <form action="<?php echo DOMINIO_SITO;?>/insertAppunti" method="post" enctype="multipart/form-data">
+                <form action="<?php echo DOMINIO_SITO;?>/realEditAppunti?keyToEdit=<?php echo $_GET['keyToEdit'];?>" method="post" enctype="multipart/form-data">
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Name</label>
-                            <input type="text" class="form-control" placeholder="<?php echo $appunto->getNome();?>" id="nome" name="nome" required data-validation-required-message="Inserisci un nome.">
+                            <input type="text" class="form-control" placeholder="<?php echo $appunto->getNome();?>" id="nome" name="nome"  data-validation-required-message="Inserisci un nome.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -83,14 +88,14 @@
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Year</label>
-                                <textarea rows="2" class="form-control" placeholder="Year of event" name="annoCorso" required data-validation-required-message="Inserisci una descrizione."></textarea>
+                                <textarea rows="2" class="form-control" placeholder="<?php echo $appunto->getAnnoCorso();?>" name="annoCorso"  data-validation-required-message="Inserisci una descrizione."></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Upload date</label>
-                            <input type="text" class="form-control" placeholder="Date" name="dataDiCaricamento" required data-validation-required-message="Inserisci un nome.">
+                            <input type="text" class="form-control" placeholder="<?php echo $appunto->getDataDiCaricamento();?>" name="dataDiCaricamento"  data-validation-required-message="Inserisci un nome.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>

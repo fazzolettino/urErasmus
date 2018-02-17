@@ -67,16 +67,16 @@ CREATE TABLE appunti (
 --
 
 INSERT INTO `appunti` (`KEYCORSI`, `NOME`, `CATEGORIA`, `ANNOCORSO`, `DATADICARICAMENTO`, `KEYUTENTE`) VALUES
-(1, 'Architettura degli elaboratori', 'Informatica', 'Primo anno, primo semestr', '2017-01-31', 1),
-(2, 'Algoritmi & Strutture Dati', 'Informatica', 'Secondo anno, secondo sem', '2017-01-31', 1),
-(3, 'Analisi Matematica', 'Matematica', 'Primo anno, secondo semes', '2017-01-31', 2),
-(4, 'Analisi Matematica informatica', 'Informatica', 'Primo anno, secondo semes', '2017-01-31', 2),
-(7, 'Chimica Organica', 'Chimica', 'Secondo anno, primo semes', '2017-01-31', 3),
-(8, 'Chimica Inorganica', 'Chimica', 'Terzo anno, secondo semes', '2017-01-31', 3),
-(9, 'Biologia Molecolare', 'Biologia', 'Terzo anno, primo semestr', '2017-01-31', 4),
-(10, 'Ecologia Vegetale', 'Scienze Ambientali', 'Secondo anno, primo semes', '2017-01-31', 5),
-(11, 'Ecologia Generale', 'Scienze Ambientali', 'Secondo anno, secondo sem', '2017-01-31', 5),
-(12, 'Fisica Applicata', 'Fisica', 'Primo anno, secondo semes', '2017-01-31', 7);
+(1, 'Architettura degli elaboratori', 'Fun Events', 'Primo anno, primo semestre', '2017-01-31', 1),
+(2, 'Algoritmi & Strutture Dati', 'University Events', 'Secondo anno, secondo semestre', '2017-01-31', 1),
+(3, 'Analisi Matematica', 'Fun Events', 'Primo anno, secondo semestre', '2017-01-31', 2),
+(4, 'Analisi Matematica University Events', 'Informatica', 'Primo anno, secondo semestre', '2017-01-31', 2),
+(7, 'Chimica Organica', 'Fun Events', 'Secondo anno, primo semestre', '2017-01-31', 3),
+(8, 'Chimica Inorganica', 'University Events', 'Terzo anno, secondo semestre', '2017-01-31', 3),
+(9, 'Biologia Molecolare', 'Fun Events', 'Terzo anno, primo semestre', '2017-01-31', 4),
+(10, 'Ecologia Vegetale', 'University Events', 'Secondo anno, primo semestre', '2017-01-31', 5),
+(11, 'Ecologia Generale', 'Fun Events', 'Secondo anno, secondo semestre', '2017-01-31', 5),
+(12, 'Fisica Applicata', 'University Events', 'Primo anno, secondo semestre', '2017-01-31', 7);
 
 -- --------------------------------------------------------
 
