@@ -1,23 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.7.4
--- https://www.phpmyadmin.net/
---
--- Host: localhost
--- Creato il: Gen 30, 2018 alle 14:24
--- Versione del server: 10.1.28-MariaDB
--- Versione PHP: 7.1.10
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
 -- Database: `urErasmus`
 --
@@ -67,16 +47,11 @@ CREATE TABLE appunti (
 --
 
 INSERT INTO `appunti` (`KEYCORSI`, `NOME`, `CATEGORIA`, `ANNOCORSO`, `DATADICARICAMENTO`, `KEYUTENTE`) VALUES
-(1, 'Architettura degli elaboratori', 'Fun Events', 'Primo anno, primo semestre', '2017-01-31', 1),
-(2, 'Algoritmi & Strutture Dati', 'University Events', 'Secondo anno, secondo semestre', '2017-01-31', 1),
-(3, 'Analisi Matematica', 'Fun Events', 'Primo anno, secondo semestre', '2017-01-31', 2),
-(4, 'Analisi Matematica University Events', 'Informatica', 'Primo anno, secondo semestre', '2017-01-31', 2),
-(7, 'Chimica Organica', 'Fun Events', 'Secondo anno, primo semestre', '2017-01-31', 3),
-(8, 'Chimica Inorganica', 'University Events', 'Terzo anno, secondo semestre', '2017-01-31', 3),
-(9, 'Biologia Molecolare', 'Fun Events', 'Terzo anno, primo semestre', '2017-01-31', 4),
-(10, 'Ecologia Vegetale', 'University Events', 'Secondo anno, primo semestre', '2017-01-31', 5),
-(11, 'Ecologia Generale', 'Fun Events', 'Secondo anno, secondo semestre', '2017-01-31', 5),
-(12, 'Fisica Applicata', 'University Events', 'Primo anno, secondo semestre', '2017-01-31', 7);
+(1, 'PartyErasmus', 'Fun Events', 'Primo anno, primo semestre', '2018-02-22', 1),
+(2, 'MartediUnisa', 'University Events', 'Secondo anno, secondo semestre', '2018-03-07', 1),
+(3, 'BailaRaeggeton', 'Fun Events', 'Primo anno, secondo semestre', '2018-03-16', 2),
+(4, 'CoverBandJovanotti', 'Informatica', 'Primo anno, secondo semestre', '2018-03-28', 2),
+(7, 'UniBeat', 'Fun Events', 'Secondo anno, primo semestre', '2018-04-4', 3),;
 
 -- --------------------------------------------------------
 
@@ -97,10 +72,10 @@ CREATE TABLE utente (
 
 INSERT INTO `utente` (`KEYUTENTE`, `ID`, `EMAIL`, `CITTA`, `PASS`) VALUES
 (1, 'Rodrigo Calvo', 'rodrigo@gmail.com', 'Oviedo', 'rodrimepone'),
-(2, 'Manuel', 'saradifelice@hotmail.com', 'Salerno', 'saradifelice'),
-(3, 'Alessandro Guaion', 'v.noviello@gmail.com', 'Sala Consilina', 'vnoviello'),
-(4, 'Martina Lombardi', 'Lombardim@live.it', 'Caserta', '123456'),
-(5, 'Severino Ammirati', 's.ammirati@gmail.com', 'Striano', 'ammirati'),
+(2, 'Javier Pastore', 'jpastore@hotmail.com', 'Lisbona', 'jpastore'),
+(3, 'Frank Lampard', 'flampard@gmail.com', 'Londra', 'flampard'),
+(4, 'Miroslav Klose', 'mklose@live.de', 'Norimberga', 'miroklose'),
+(5, 'Severino Ammirat', 's.ammirati@gmail.com', 'Striano', 'ammirati'),
 (6, 'Giovanni Salvati', 'giosalvati@gmail.com', 'Napoli', 'salvati'),
 (7, 'Giuseppe Bellino', 'gbellino@gmail.com', 'Terzigno', 'bellini'),
 (8, 'Mirko_PROLOLGAMER', 'm.aliberti@gmail.com', 'Siano', 'aliberti'),
