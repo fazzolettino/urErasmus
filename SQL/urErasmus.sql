@@ -51,7 +51,7 @@ INSERT INTO `appunti` (`KEYCORSI`, `NOME`, `CATEGORIA`, `ANNOCORSO`, `DATADICARI
 (2, 'MartediUnisa', 'University Events', 'Secondo anno, secondo semestre', '2018-03-07', 1),
 (3, 'BailaRaeggeton', 'Fun Events', 'Primo anno, secondo semestre', '2018-03-16', 2),
 (4, 'CoverBandJovanotti', 'Informatica', 'Primo anno, secondo semestre', '2018-03-28', 2),
-(7, 'UniBeat', 'Fun Events', 'Secondo anno, primo semestre', '2018-04-4', 3),;
+(7, 'UniBeat', 'Fun Events', 'Secondo anno, primo semestre', '2018-04-4', 3);
 
 -- --------------------------------------------------------
 
