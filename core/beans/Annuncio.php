@@ -9,7 +9,6 @@ class Annuncio
     private $contatto;
     private $dataDiCaricamento;
     private $keyUtente;
-    private $tags;
 
     /**
      * Annuncio constructor.
@@ -21,7 +20,7 @@ class Annuncio
      * @param $keyUtente
      * @param $tags
      */
-    public function __construct($keyAnnuncio, $titolo, $descrizione, $contatto, $dataDiCaricamento, $keyUtente, $tags)
+    public function __construct($keyAnnuncio, $titolo, $descrizione, $contatto, $dataDiCaricamento, $keyUtente)
     {
         $this->keyAnnuncio = $keyAnnuncio;
         $this->titolo = $titolo;
@@ -29,7 +28,6 @@ class Annuncio
         $this->contatto = $contatto;
         $this->dataDiCaricamento = $dataDiCaricamento;
         $this->keyUtente = $keyUtente;
-        $this->tags = $tags;
     }
 
     /**
@@ -119,22 +117,6 @@ class Annuncio
     public function setKeyUtente($keyUtente)
     {
         $this->keyUtente = $keyUtente;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTags()
-    {
-        return $this->tags;
-    }
-
-    /**
-     * @param mixed $tags
-     */
-    public function setTags($tags)
-    {
-        $this->tags = $tags;
     }
 
 

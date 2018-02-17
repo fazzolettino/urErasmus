@@ -49,7 +49,7 @@ $appunto = $manager->getAppuntiByKeyAppunti($_GET['keyToEdit']);
 
         $_SESSION['toast-type'] = "success";
         $_SESSION['toast-message'] = "Modifiche applicate con successo";
-        header("Location:" . DOMINIO_SITO . "/editAppunti?keyToEdit=" . $_GET['keyToEdit']);
+        header("Location:" . DOMINIO_SITO . "/getAppunti");
 
     } else {
 

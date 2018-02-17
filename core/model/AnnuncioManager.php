@@ -52,15 +52,12 @@ class AnnuncioManager
         $selectSql = "SELECT * FROM ANNUNCIO WHERE KEYANNUNCIO = '%s'";
         $query = sprintf($selectSql,$keyAnnunci);
         $res = mysqli_query(Connector::getConnector(), $query);
-        $listAnnunci = array();
         if ($res) {
             while ($obj = $res->fetch_assoc()) {
-                $listTag = $this->tagManager->getTagByAnnuncio($obj['KEYANNUNCIO']);
-                $annuncio = new Annuncio($obj['KEYANNUNCIO'],$obj['TITOLO'],$obj['DESCRIZIONE'],$obj['CONTATTO'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
-                array_push($listAnnunci,$annuncio);
+                $annuncio = new Annuncio($obj['KEYANNUNCIO'],$obj['TITOLO'],$obj['DESCRIZIONE'],$obj['CONTATTO'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE']);
             }
         }
-        return $listAnnunci;
+        return $annuncio;
     }
 
     public function getAnnunciByTitolo($titolo){
@@ -101,11 +98,16 @@ class AnnuncioManager
         //echo $query;
     }
 
-    public function modificaAnnuncio($keyAnnuncio){
-        $selectSql = "UPDATE * FROM `annuncio` WHERE 'KEYANNUNCIO' = '%S'";
-        $query = sprintf($selectSql,$keyAnnuncio);
+    public function modificaAnnuncio($keyAnnuncio, $titolo, $descrizione, $contatto){
+        $selectSql = "UPDATE `annuncio` SET `TITOLO`='%s',`DESCRIZIONE`='%s',`CONTATTO`='%s' WHERE `KEYANNUNCIO` = '%s'";
+        $query = sprintf($selectSql,$titolo, $descrizione, $contatto, $keyAnnuncio);
         $res = mysqli_query(Connector::getConnector(),$query);
-        
+        echo $query;
+        if($res) {
+            return true;
+        } else {
+            return false;
+        }
         
     }
 

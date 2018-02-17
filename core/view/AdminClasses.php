@@ -73,7 +73,7 @@
                                             <th><?php echo $annunci[$i]->getTitolo()?></th>
                                             <th><?php echo $annunci[$i]->getDescrizione()?></th>
                                             <th><?php echo $annunci[$i]->getContatto()?></th>
-                                            <th><a href="<?php echo DOMINIO_SITO. "/removeAnnuncio?keyToEdit=" . $annunci[$i]->getKeyAnnuncio();?>"><i class="fa fa-edit" style="font-size: 150%"></i></a></th>
+                                            <th><a href="<?php echo DOMINIO_SITO. "/editAnnuncio?keyToEdit=" . $annunci[$i]->getKeyAnnuncio();?>"><i class="fa fa-edit" style="font-size: 150%"></i></a></th>
                                             <th><a href="<?php echo DOMINIO_SITO. "/removeAnnuncio?keyToDelete=" . $annunci[$i]->getKeyAnnuncio();?>"><i class="fa fa-times" style="font-size: 150%; color: red"></i></a></th>
                                         </tr>
 
