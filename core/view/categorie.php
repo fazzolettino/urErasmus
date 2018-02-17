@@ -70,6 +70,7 @@
                         <p><?php echo $appunti[$i]->getDataDiCaricamento();?></p>
                         <?php } ?>
                         <p class="help-block text-danger"></p>
+                        
                     </div>
                 
             </div>
