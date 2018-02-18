@@ -58,7 +58,7 @@ if(isset($_SESSION['user'])) {
 
                         $_SESSION['toast-type'] = "success";
                         $_SESSION['toast-message'] = "Modifiche applicate con successo";
-                        header("Location:" . DOMINIO_SITO . "/modificaProfiloUtente");
+                    header("Location:" . DOMINIO_SITO . "/profiloUtente");
 
 
 

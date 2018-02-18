@@ -29,24 +29,24 @@ if(isset($_SESSION['user'])) {
 
                     $_SESSION['toast-type'] = "success";
                     $_SESSION['toast-message'] = "Modifiche applicate con successo";
-                    header("Location:" . DOMINIO_SITO . "/modificaProfiloUtente");
+                    header("Location:" . DOMINIO_SITO . "/profiloUtente");
 
                 } else {
                     $_SESSION['toast-type'] = "error";
                     $_SESSION['toast-message'] = "Password vecchia errata";
-                    header("Location:" . DOMINIO_SITO . "/modificaProfiloUtente");
+                    header("Location:" . DOMINIO_SITO . "/profiloUtente");
                 }
 
             } else {
                 $_SESSION['toast-type'] = "error";
                 $_SESSION['toast-message'] = "Password inserite diverse";
-                header("Location:" . DOMINIO_SITO . "/modificaProfiloUtente");
+                header("Location:" . DOMINIO_SITO . "/ProfiloUtente");
 
             }
         } else {
             $_SESSION['toast-type'] = "error";
             $_SESSION['toast-message'] = "Password non inserita";
-            header("Location:" . DOMINIO_SITO . "/modificaProfiloUtente");
+            header("Location:" . DOMINIO_SITO . "/ProfiloUtente");
 
         }
     }else{
